@@ -1,0 +1,17 @@
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/UnityEngine.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/UnityEditor.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Mono.Cecil.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Unity.DataContract.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/obj/Debug/Assembly-CSharp.dll
+/Users/abc-vn-35/Downloads/RocketMouse_StarterProject/obj/Debug/Assembly-CSharp.dll.mdb
