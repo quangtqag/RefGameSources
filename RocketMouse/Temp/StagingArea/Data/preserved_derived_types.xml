@@ -1,9 +1,0 @@
-<linker>
-<assembly fullname="Assembly-CSharp">
-<type fullname="CameraFollow" preserve="all"/>
-<type fullname="GeneratorScript" preserve="all"/>
-<type fullname="LaserScript" preserve="all"/>
-<type fullname="MouseController" preserve="all"/>
-<type fullname="ParallaxScroll" preserve="all"/>
-</assembly>
-</linker>
