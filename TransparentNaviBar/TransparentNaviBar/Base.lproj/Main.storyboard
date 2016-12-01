@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oJu-HZ-inK">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hello World-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TransparentNaviBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G93-Fw-96e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper1" translatesAutoresizingMaskIntoConstraints="NO" id="4Rt-Yz-QjU">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="3AO-j6-zKi"/>
+                                            <constraint firstAttribute="width" constant="320" id="FI2-Yb-KXc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper2" translatesAutoresizingMaskIntoConstraints="NO" id="61z-Vt-GWD">
+                                        <rect key="frame" x="0.0" y="290" width="320" height="250"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper3" translatesAutoresizingMaskIntoConstraints="NO" id="jcV-el-TgN">
+                                        <rect key="frame" x="0.0" y="580" width="320" height="250"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper4" translatesAutoresizingMaskIntoConstraints="NO" id="JQj-wW-lhn">
+                                        <rect key="frame" x="0.0" y="870" width="320" height="250"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4Rt-Yz-QjU" firstAttribute="leading" secondItem="G93-Fw-96e" secondAttribute="leading" id="0yd-Vr-RD6"/>
+                                    <constraint firstItem="jcV-el-TgN" firstAttribute="trailing" secondItem="61z-Vt-GWD" secondAttribute="trailing" id="5NT-mE-bhT"/>
+                                    <constraint firstItem="61z-Vt-GWD" firstAttribute="leading" secondItem="4Rt-Yz-QjU" secondAttribute="leading" id="7Xc-fV-8ht"/>
+                                    <constraint firstItem="61z-Vt-GWD" firstAttribute="height" secondItem="4Rt-Yz-QjU" secondAttribute="height" id="7o5-e0-ICn"/>
+                                    <constraint firstItem="4Rt-Yz-QjU" firstAttribute="top" secondItem="G93-Fw-96e" secondAttribute="top" id="DXy-fV-LcB"/>
+                                    <constraint firstItem="61z-Vt-GWD" firstAttribute="trailing" secondItem="4Rt-Yz-QjU" secondAttribute="trailing" id="H26-Qi-zfJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="JQj-wW-lhn" secondAttribute="bottom" id="HDn-BM-X7p"/>
+                                    <constraint firstItem="jcV-el-TgN" firstAttribute="leading" secondItem="61z-Vt-GWD" secondAttribute="leading" id="Icx-DM-LtI"/>
+                                    <constraint firstItem="JQj-wW-lhn" firstAttribute="trailing" secondItem="jcV-el-TgN" secondAttribute="trailing" id="Vqx-Kt-3yQ"/>
+                                    <constraint firstItem="JQj-wW-lhn" firstAttribute="height" secondItem="jcV-el-TgN" secondAttribute="height" id="aO7-dT-4QX"/>
+                                    <constraint firstItem="61z-Vt-GWD" firstAttribute="top" secondItem="4Rt-Yz-QjU" secondAttribute="bottom" constant="40" id="bEb-3t-Dvx"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Rt-Yz-QjU" secondAttribute="trailing" id="ryv-9Q-bHU"/>
+                                    <constraint firstItem="jcV-el-TgN" firstAttribute="top" secondItem="61z-Vt-GWD" secondAttribute="bottom" constant="40" id="vVu-Rr-gmg"/>
+                                    <constraint firstItem="JQj-wW-lhn" firstAttribute="leading" secondItem="jcV-el-TgN" secondAttribute="leading" id="vps-DV-rdS"/>
+                                    <constraint firstItem="jcV-el-TgN" firstAttribute="height" secondItem="61z-Vt-GWD" secondAttribute="height" id="yWF-SZ-qhy"/>
+                                    <constraint firstItem="JQj-wW-lhn" firstAttribute="top" secondItem="jcV-el-TgN" secondAttribute="bottom" constant="40" id="zce-Ha-wNN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G93-Fw-96e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Rx-Fu-OGa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G93-Fw-96e" secondAttribute="bottom" id="PaW-T5-RUM"/>
+                            <constraint firstItem="G93-Fw-96e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="huw-ZR-hXk"/>
+                            <constraint firstAttribute="trailing" secondItem="G93-Fw-96e" secondAttribute="trailing" id="lie-JZ-Zve"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello World" id="E1w-aV-dPc"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="imageViewWidthConstraint" destination="FI2-Yb-KXc" id="cwZ-fS-BTA"/>
+                        <outlet property="scrollView" destination="G93-Fw-96e" id="AtS-ny-RkB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871.875" y="797.5"/>
+        </scene>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="7HQ-xX-lBm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oJu-HZ-inK" customClass="CustomNavigationController" customModule="TransparentNaviBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vHi-zm-JCu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kIb-Dc-gug"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7g-KD-k5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="797.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wallpaper1" width="660" height="371"/>
+        <image name="wallpaper2" width="900" height="592"/>
+        <image name="wallpaper3" width="688" height="430"/>
+        <image name="wallpaper4" width="600" height="450"/>
+    </resources>
+</document>
