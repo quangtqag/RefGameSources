@@ -1,3 +1,3 @@
-# RefGameSources
+# Reference Sources
 
-Obtain Unity game source for reference sake
+Obtain demos for reference sake
