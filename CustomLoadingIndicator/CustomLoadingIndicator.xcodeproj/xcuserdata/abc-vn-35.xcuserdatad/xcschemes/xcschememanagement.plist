@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MyLoggerSwift.xcscheme</key>
+		<key>CustomLoadingIndicator.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D9D9E3E11D53365F0007048B</key>
+		<key>748294A01D0BDD210023DC91</key>
 		<dict>
 			<key>primary</key>
 			<true/>

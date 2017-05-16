@@ -10,6 +10,8 @@ import UIKit
 
 @IBDesignable
 class MyLoadingIndicator: UIView {
+  
+  var isAnimating = false
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -21,49 +23,51 @@ class MyLoadingIndicator: UIView {
     myInit()
   }
   
-  private func myInit() {
-    self.backgroundColor = UIColor.clearColor()
+  fileprivate func myInit() {
+    self.backgroundColor = UIColor.clear
   }
   
   func startAnimating() {
     let animateZRotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-    animateZRotation.toValue = NSNumber(float: 2 * Float(M_PI))
+    animateZRotation.toValue = NSNumber(value: 2 * Float(Double.pi) as Float)
     animateZRotation.duration = 1
     animateZRotation.repeatCount = Float.infinity
     
-    self.layer.addAnimation(animateZRotation, forKey: "rotate")
+    self.layer.add(animateZRotation, forKey: "rotate")
+    self.isAnimating = true
   }
   
   func stopAnimating() {
     self.layer.removeAllAnimations()
+    self.isAnimating = false
   }
   
-  override func drawLayer(layer: CALayer, inContext context: CGContext) {
+  override func draw(_ layer: CALayer, in ctx: CGContext) {
     let lineWidth: CGFloat = 5
     // Variables for create gradient
-    let startColor = UIColor(white: 1, alpha: 0).CGColor
-    let endColor = UIColor.greenColor().CGColor
-    let colorSpace: CGColorSpace = CGColorSpaceCreateDeviceRGB()!
+    let startColor = UIColor(white: 1, alpha: 0).cgColor
+    let endColor = UIColor.green.cgColor
+    let colorSpace: CGColorSpace = CGColorSpaceCreateDeviceRGB()
     let colors: [CGColor] = [startColor, endColor]
     let locations: [CGFloat] = [0.0, 1.0]
-    let gradient: CGGradient = CGGradientCreateWithColors(colorSpace, colors, locations)!
-    let startPoint = CGPointMake(self.bounds.size.width - lineWidth/2, self.bounds.size.height/2)
-    let endPoint = CGPointMake(0, self.bounds.height/2)
-    let centerPoint = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2)
+    let gradient: CGGradient = CGGradient(colorsSpace: colorSpace, colors: colors as CFArray, locations: locations)!
+    let startPoint = CGPoint(x: self.bounds.size.width - lineWidth/2, y: self.bounds.size.height/2)
+    let endPoint = CGPoint(x: 0, y: self.bounds.height/2)
+    let centerPoint = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
     
     // Stroke arc with gradient
-    let arc: CGMutablePath = CGPathCreateMutable()
-    CGPathAddArc(arc, nil, centerPoint.x, centerPoint.y, self.bounds.size.width/2 - lineWidth/2, 0, CGFloat(M_PI), false)
-    CGContextAddPath(context, arc)
-    CGContextSetLineWidth(context, lineWidth)
-    CGContextSetLineCap(context, CGLineCap.Round)
-    CGContextReplacePathWithStrokedPath(context)
-    CGContextClip(context)
-    CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, [CGGradientDrawingOptions.DrawsBeforeStartLocation, CGGradientDrawingOptions.DrawsAfterEndLocation])
-  }
-  
-  override func drawRect(rect: CGRect) {
-    
+    let path: CGMutablePath = CGMutablePath()
+    path.addArc(center: centerPoint, radius: self.bounds.size.width/2 - lineWidth/2, startAngle: 0, endAngle: CGFloat(Double.pi), clockwise: false)
+    ctx.addPath(path)
+    ctx.setLineWidth(lineWidth)
+    ctx.setLineCap(CGLineCap.round)
+    ctx.replacePathWithStrokedPath()
+    ctx.clip()
+    ctx.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: [CGGradientDrawingOptions.drawsBeforeStartLocation, CGGradientDrawingOptions.drawsAfterEndLocation])
   }
  
+  // Without this function draw(_ layer: CALayer, in ctx: CGContext) will not run
+  override func draw(_ rect: CGRect) {
+    super.draw(rect)
+  }
 }

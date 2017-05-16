@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D9D9E3E11D53365F0007048B"
-               BuildableName = "MyLoggerSwift.app"
-               BlueprintName = "MyLoggerSwift"
-               ReferencedContainer = "container:MyLoggerSwift.xcodeproj">
+               BlueprintIdentifier = "748294A01D0BDD210023DC91"
+               BuildableName = "CustomLoadingIndicator.app"
+               BlueprintName = "CustomLoadingIndicator"
+               ReferencedContainer = "container:CustomLoadingIndicator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D9D9E3E11D53365F0007048B"
-            BuildableName = "MyLoggerSwift.app"
-            BlueprintName = "MyLoggerSwift"
-            ReferencedContainer = "container:MyLoggerSwift.xcodeproj">
+            BlueprintIdentifier = "748294A01D0BDD210023DC91"
+            BuildableName = "CustomLoadingIndicator.app"
+            BlueprintName = "CustomLoadingIndicator"
+            ReferencedContainer = "container:CustomLoadingIndicator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D9D9E3E11D53365F0007048B"
-            BuildableName = "MyLoggerSwift.app"
-            BlueprintName = "MyLoggerSwift"
-            ReferencedContainer = "container:MyLoggerSwift.xcodeproj">
+            BlueprintIdentifier = "748294A01D0BDD210023DC91"
+            BuildableName = "CustomLoadingIndicator.app"
+            BlueprintName = "CustomLoadingIndicator"
+            ReferencedContainer = "container:CustomLoadingIndicator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D9D9E3E11D53365F0007048B"
-            BuildableName = "MyLoggerSwift.app"
-            BlueprintName = "MyLoggerSwift"
-            ReferencedContainer = "container:MyLoggerSwift.xcodeproj">
+            BlueprintIdentifier = "748294A01D0BDD210023DC91"
+            BuildableName = "CustomLoadingIndicator.app"
+            BlueprintName = "CustomLoadingIndicator"
+            ReferencedContainer = "container:CustomLoadingIndicator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
