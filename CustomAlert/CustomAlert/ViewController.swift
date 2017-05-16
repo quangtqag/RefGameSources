@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  @IBAction func showButtonDidTap(sender: AnyObject) {
+  @IBAction func showButtonDidTap(_ sender: AnyObject) {
     let confirmationAlertVC = ConfirmationAlertVC()
     confirmationAlertVC.alertTitle = "Does your video contain only 1 made dunk?"
     
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     confirmationAlertVC.yesCallback = {
       print("yes button did tap")
     }
-    self.presentViewController(confirmationAlertVC, animated: true, completion: nil)
+    self.present(confirmationAlertVC, animated: true, completion: nil)
   }
 
 }

@@ -19,6 +19,12 @@ class ViewController: UIViewController {
     self.automaticallyAdjustsScrollViewInsets = false
     self.scrollView.delegate = self
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.navigationBar.isTranslucent = true
+//    self.navigationController?.navigationBar.backgroundColor = UIColor(white: 1, alpha: 0)
+  }
 
   override func viewDidLayoutSubviews() {
     self.imageViewWidthConstraint.constant = self.scrollView.frame.size.width

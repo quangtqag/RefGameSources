@@ -89,17 +89,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: UIScrollViewDelegate {
-  func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
-      scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentSize.height - scrollView.frame.size.height)
-    }
-  }
+//  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//    if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
+//      scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentSize.height - scrollView.frame.size.height)
+//    }
+//  }
 }
-
-
-
-
-
-
-
-

@@ -87,7 +87,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oJu-HZ-inK" customClass="CustomNavigationController" customModule="TransparentNaviBar" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vHi-zm-JCu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="vHi-zm-JCu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

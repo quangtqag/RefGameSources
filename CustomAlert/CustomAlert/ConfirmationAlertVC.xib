@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmationAlertVC" customModule="CustomAlert" customModuleProvider="target">
             <connections>
-                <outlet property="chromeView" destination="o7Y-G4-aCP" id="cjV-mP-iCb"/>
                 <outlet property="dontShowAgainLabel" destination="QoG-lx-52j" id="eCZ-Xe-gfd"/>
                 <outlet property="dontShowAgainSwitch" destination="Wdr-jw-Spe" id="TQg-dv-Q2R"/>
                 <outlet property="modalView" destination="V5u-tc-9yt" id="IUl-of-ulO"/>
@@ -26,10 +25,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7Y-G4-aCP">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.51120689655172413" colorSpace="calibratedRGB"/>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-tc-9yt">
                     <rect key="frame" x="20" y="169" width="280" height="142"/>
                     <subviews>
@@ -93,10 +88,6 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="V5u-tc-9yt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3V1-ku-l7v"/>
-                <constraint firstItem="o7Y-G4-aCP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AVA-gb-tY4"/>
-                <constraint firstItem="o7Y-G4-aCP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MZb-C5-mvO"/>
-                <constraint firstAttribute="trailing" secondItem="o7Y-G4-aCP" secondAttribute="trailing" id="dgY-VD-Pzg"/>
-                <constraint firstAttribute="bottom" secondItem="o7Y-G4-aCP" secondAttribute="bottom" id="q1T-9J-sIt"/>
                 <constraint firstItem="V5u-tc-9yt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uJ7-1d-swM"/>
             </constraints>
         </view>

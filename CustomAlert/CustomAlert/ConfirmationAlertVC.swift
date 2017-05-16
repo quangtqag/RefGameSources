@@ -14,10 +14,9 @@ class ConfirmationAlertVC: UIViewController {
   var alertTitle: String!
   var noCallback: (()->())?
   var yesCallback: (()->())!
-  var switchDidChangeStateCallback: ((on: Bool)->())!
+  var switchDidChangeStateCallback: ((_ on: Bool)->())!
   
   // Internal
-  @IBOutlet weak var chromeView: UIView!
   @IBOutlet weak var modalView: UIView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var dontShowAgainLabel: UILabel!
@@ -25,7 +24,7 @@ class ConfirmationAlertVC: UIViewController {
   @IBOutlet weak var noButton: UIButton!
   @IBOutlet weak var yesButton: UIButton!
   
-  let animationTimeInterval: NSTimeInterval = 0.25
+  let animationTimeInterval: TimeInterval = 0.25
   let scaleRatio: CGFloat = 0.7
   
   override func viewDidLoad() {
@@ -35,71 +34,73 @@ class ConfirmationAlertVC: UIViewController {
     self.populateData()
   }
   
-  private func populateData() {
+  fileprivate func populateData() {
     self.titleLabel.text = self.alertTitle
   }
   
-  private func configUI() {
-    self.chromeView.alpha = 0
+  fileprivate func configUI() {
+    self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+    self.view.alpha = 0
     
     self.modalView.layer.cornerRadius = 5
     self.modalView.layer.masksToBounds = true
     self.modalView.alpha = 0
-    self.modalView.transform = CGAffineTransformMakeScale(self.scaleRatio, self.scaleRatio)
+    self.modalView.transform = CGAffineTransform(scaleX: self.scaleRatio, y: self.scaleRatio)
     
-    self.noButton.layer.borderColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.7).CGColor
+    self.noButton.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
     self.noButton.layer.borderWidth = 0.5
     
-    self.yesButton.layer.borderColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.7).CGColor
+    self.yesButton.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
     self.yesButton.layer.borderWidth = 0.5
   }
   
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     self.animateShowModalWithCompletionBlock(nil)
   }
   
-  private func animateShowModalWithCompletionBlock(completionBlock: (()->())?) {
-    UIView.animateWithDuration(animationTimeInterval, animations: {
-      self.chromeView.alpha = 1
+  fileprivate func animateShowModalWithCompletionBlock(_ completionBlock: (()->())?) {
+    UIView.animate(withDuration: animationTimeInterval, animations: {
+      self.view.alpha = 1
       self.modalView.alpha = 1
-      self.modalView.transform = CGAffineTransformMakeScale(1.0, 1.0)
-    }) { completed in
+      self.modalView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+    }, completion: { completed in
       completionBlock?()
-    }
+    }) 
   }
   
-  private func animateHideModalWithCompletionBlock(completionBlock: (()->())?) {
-    UIView.animateWithDuration(animationTimeInterval, animations: {
-      self.chromeView.alpha = 0
+  fileprivate func animateHideModalWithCompletionBlock(_ completionBlock: (()->())?) {
+    UIView.animate(withDuration: animationTimeInterval, animations: {
+      self.view.alpha = 0
       self.modalView.alpha = 0
-      self.modalView.transform = CGAffineTransformMakeScale(self.scaleRatio, self.scaleRatio)
-    }) { (completed) in
-      self.dismissViewControllerAnimated(false, completion: nil)
+      self.modalView.transform = CGAffineTransform(scaleX: self.scaleRatio, y: self.scaleRatio)
+    }, completion: { (completed) in
       completionBlock?()
-    }
+    }) 
   }
   
-  @IBAction func switchDidChangeState(sender: UISwitch) {
-    self.switchDidChangeStateCallback(on: sender.on)
+  @IBAction func switchDidChangeState(_ sender: UISwitch) {
+    self.switchDidChangeStateCallback(sender.isOn)
   }
   
-  @IBAction func noButtonDidTap(sender: AnyObject) {
+  @IBAction func noButtonDidTap(_ sender: AnyObject) {
     self.animateHideModalWithCompletionBlock { 
       self.noCallback?()
+      self.dismiss(animated: false, completion: nil)
     }
   }
   
-  @IBAction func yesButtonDidTap(sender: AnyObject) {
+  @IBAction func yesButtonDidTap(_ sender: AnyObject) {
     self.animateHideModalWithCompletionBlock {
       self.yesCallback()
+      self.dismiss(animated: false, completion: nil)
     }
   }
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     
-    self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-    self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+    self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+    self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
   }
   
   required init?(coder aDecoder: NSCoder) {
