@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D956C4801ECA8C9D00FC829C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D956C47F1ECA8C9D00FC829C /* main.m */; };
+		D956C4831ECA8C9D00FC829C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D956C4821ECA8C9D00FC829C /* AppDelegate.m */; };
+		D956C4861ECA8C9D00FC829C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D956C4851ECA8C9D00FC829C /* ViewController.m */; };
+		D956C4891ECA8C9D00FC829C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D956C4871ECA8C9D00FC829C /* Main.storyboard */; };
+		D956C48B1ECA8C9D00FC829C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D956C48A1ECA8C9D00FC829C /* Assets.xcassets */; };
+		D956C48E1ECA8C9D00FC829C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D956C48C1ECA8C9D00FC829C /* LaunchScreen.storyboard */; };
+		D9D9E9651ECAA14A006A1555 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D9E9641ECAA14A006A1555 /* SettingsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D956C47B1ECA8C9D00FC829C /* DrawPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D956C47F1ECA8C9D00FC829C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D956C4811ECA8C9D00FC829C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D956C4821ECA8C9D00FC829C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D956C4841ECA8C9D00FC829C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D956C4851ECA8C9D00FC829C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D956C4881ECA8C9D00FC829C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D956C48A1ECA8C9D00FC829C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D956C48D1ECA8C9D00FC829C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D956C48F1ECA8C9D00FC829C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9D9E9631ECAA14A006A1555 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D9D9E9641ECAA14A006A1555 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D956C4781ECA8C9D00FC829C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D956C4721ECA8C9D00FC829C = {
+			isa = PBXGroup;
+			children = (
+				D956C47D1ECA8C9D00FC829C /* DrawPad */,
+				D956C47C1ECA8C9D00FC829C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D956C47C1ECA8C9D00FC829C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D956C47B1ECA8C9D00FC829C /* DrawPad.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D956C47D1ECA8C9D00FC829C /* DrawPad */ = {
+			isa = PBXGroup;
+			children = (
+				D956C4811ECA8C9D00FC829C /* AppDelegate.h */,
+				D956C4821ECA8C9D00FC829C /* AppDelegate.m */,
+				D956C4841ECA8C9D00FC829C /* ViewController.h */,
+				D956C4851ECA8C9D00FC829C /* ViewController.m */,
+				D9D9E9631ECAA14A006A1555 /* SettingsViewController.h */,
+				D9D9E9641ECAA14A006A1555 /* SettingsViewController.m */,
+				D956C4871ECA8C9D00FC829C /* Main.storyboard */,
+				D956C48A1ECA8C9D00FC829C /* Assets.xcassets */,
+				D956C48C1ECA8C9D00FC829C /* LaunchScreen.storyboard */,
+				D956C48F1ECA8C9D00FC829C /* Info.plist */,
+				D956C47E1ECA8C9D00FC829C /* Supporting Files */,
+			);
+			path = DrawPad;
+			sourceTree = "<group>";
+		};
+		D956C47E1ECA8C9D00FC829C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D956C47F1ECA8C9D00FC829C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D956C47A1ECA8C9D00FC829C /* DrawPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D956C4921ECA8C9D00FC829C /* Build configuration list for PBXNativeTarget "DrawPad" */;
+			buildPhases = (
+				D956C4771ECA8C9D00FC829C /* Sources */,
+				D956C4781ECA8C9D00FC829C /* Frameworks */,
+				D956C4791ECA8C9D00FC829C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawPad;
+			productName = DrawPad;
+			productReference = D956C47B1ECA8C9D00FC829C /* DrawPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D956C4731ECA8C9D00FC829C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Quang Tran";
+				TargetAttributes = {
+					D956C47A1ECA8C9D00FC829C = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 8M63B65N66;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D956C4761ECA8C9D00FC829C /* Build configuration list for PBXProject "DrawPad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D956C4721ECA8C9D00FC829C;
+			productRefGroup = D956C47C1ECA8C9D00FC829C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D956C47A1ECA8C9D00FC829C /* DrawPad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D956C4791ECA8C9D00FC829C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D956C48E1ECA8C9D00FC829C /* LaunchScreen.storyboard in Resources */,
+				D956C48B1ECA8C9D00FC829C /* Assets.xcassets in Resources */,
+				D956C4891ECA8C9D00FC829C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D956C4771ECA8C9D00FC829C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D956C4861ECA8C9D00FC829C /* ViewController.m in Sources */,
+				D956C4831ECA8C9D00FC829C /* AppDelegate.m in Sources */,
+				D956C4801ECA8C9D00FC829C /* main.m in Sources */,
+				D9D9E9651ECAA14A006A1555 /* SettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D956C4871ECA8C9D00FC829C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D956C4881ECA8C9D00FC829C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D956C48C1ECA8C9D00FC829C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D956C48D1ECA8C9D00FC829C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D956C4901ECA8C9D00FC829C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D956C4911ECA8C9D00FC829C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D956C4931ECA8C9D00FC829C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8M63B65N66;
+				INFOPLIST_FILE = DrawPad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quangtran.DrawPad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D956C4941ECA8C9D00FC829C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8M63B65N66;
+				INFOPLIST_FILE = DrawPad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quangtran.DrawPad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D956C4761ECA8C9D00FC829C /* Build configuration list for PBXProject "DrawPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D956C4901ECA8C9D00FC829C /* Debug */,
+				D956C4911ECA8C9D00FC829C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D956C4921ECA8C9D00FC829C /* Build configuration list for PBXNativeTarget "DrawPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D956C4931ECA8C9D00FC829C /* Debug */,
+				D956C4941ECA8C9D00FC829C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D956C4731ECA8C9D00FC829C /* Project object */;
+}
