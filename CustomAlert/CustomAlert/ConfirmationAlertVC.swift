@@ -99,7 +99,7 @@ class ConfirmationAlertVC: UIViewController {
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     
-    self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+    self.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
     self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
   }
   
