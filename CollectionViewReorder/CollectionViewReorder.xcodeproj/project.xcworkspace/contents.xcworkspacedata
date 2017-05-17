@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FlickrSearch.xcodeproj">
+      location = "self:/Users/abc-vn-35/Projects/RefSources/FlickrSearch/CollectionViewReorder.xcodeproj">
    </FileRef>
 </Workspace>

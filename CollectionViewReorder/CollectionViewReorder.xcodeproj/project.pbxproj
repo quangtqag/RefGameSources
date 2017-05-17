@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		793CED641D2596280018E132 /* FlickrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		793CED641D2596280018E132 /* CollectionViewReorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewReorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		793CED671D2596280018E132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793CED6C1D2596280018E132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		793CED6E1D2596280018E132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		793CED651D2596280018E132 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				793CED641D2596280018E132 /* FlickrSearch.app */,
+				793CED641D2596280018E132 /* CollectionViewReorder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,15 +76,16 @@
 				793CED701D2596280018E132 /* LaunchScreen.storyboard */,
 				793CED731D2596280018E132 /* Info.plist */,
 			);
-			path = FlickrSearch;
+			name = FlickrSearch;
+			path = CollectionViewReorder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		793CED631D2596280018E132 /* FlickrSearch */ = {
+		793CED631D2596280018E132 /* CollectionViewReorder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 793CED761D2596280018E132 /* Build configuration list for PBXNativeTarget "FlickrSearch" */;
+			buildConfigurationList = 793CED761D2596280018E132 /* Build configuration list for PBXNativeTarget "CollectionViewReorder" */;
 			buildPhases = (
 				793CED601D2596280018E132 /* Sources */,
 				793CED611D2596280018E132 /* Frameworks */,
@@ -94,9 +95,9 @@
 			);
 			dependencies = (
 			);
-			name = FlickrSearch;
+			name = CollectionViewReorder;
 			productName = FlickrSearch;
-			productReference = 793CED641D2596280018E132 /* FlickrSearch.app */;
+			productReference = 793CED641D2596280018E132 /* CollectionViewReorder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 793CED5F1D2596280018E132 /* Build configuration list for PBXProject "FlickrSearch" */;
+			buildConfigurationList = 793CED5F1D2596280018E132 /* Build configuration list for PBXProject "CollectionViewReorder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -129,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				793CED631D2596280018E132 /* FlickrSearch */,
+				793CED631D2596280018E132 /* CollectionViewReorder */,
 			);
 		};
 /* End PBXProject section */
@@ -279,7 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KWEZMLB8L2;
-				INFOPLIST_FILE = FlickrSearch/Info.plist;
+				INFOPLIST_FILE = CollectionViewReorder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.commandshift.FlickrSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,7 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KWEZMLB8L2;
-				INFOPLIST_FILE = FlickrSearch/Info.plist;
+				INFOPLIST_FILE = CollectionViewReorder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.commandshift.FlickrSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,7 +306,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		793CED5F1D2596280018E132 /* Build configuration list for PBXProject "FlickrSearch" */ = {
+		793CED5F1D2596280018E132 /* Build configuration list for PBXProject "CollectionViewReorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				793CED741D2596280018E132 /* Debug */,
@@ -314,7 +315,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		793CED761D2596280018E132 /* Build configuration list for PBXNativeTarget "FlickrSearch" */ = {
+		793CED761D2596280018E132 /* Build configuration list for PBXNativeTarget "CollectionViewReorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				793CED771D2596280018E132 /* Debug */,
