@@ -5,6 +5,8 @@
 //  Created by Richard Turton on 30/06/2016.
 //  Copyright © 2016 Richard Turton. All rights reserved.
 //
+// https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
+//
 
 import UIKit
 

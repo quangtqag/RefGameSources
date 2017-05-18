@@ -502,6 +502,7 @@
 				GCC_PREFIX_HEADER = "Anagrams/Anagrams-Prefix.pch";
 				INFOPLIST_FILE = "Anagrams/Anagrams-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quangtqag.Anagrams;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -516,6 +517,7 @@
 				GCC_PREFIX_HEADER = "Anagrams/Anagrams-Prefix.pch";
 				INFOPLIST_FILE = "Anagrams/Anagrams-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quangtqag.Anagrams;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
