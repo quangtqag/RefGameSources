@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13A210D61D5A4363BAE7ED3F /* libPods-RainForestStarter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 868B159D652C0E04F8059D12 /* libPods-RainForestStarter.a */; };
+		493EC9EAE29C5F5C34E38D6D /* libPods-AsyncDisplayKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33863C42D1172D58525C30A2 /* libPods-AsyncDisplayKit.a */; };
+		9F7D350F1D537A8100E73C90 /* CardNode_InterfaceCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D350D1D537A8100E73C90 /* CardNode_InterfaceCallbacks.m */; };
+		9FF736E51D5376DA009B70D9 /* AnimalTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736D31D5376DA009B70D9 /* AnimalTableController.m */; };
+		9FF736E61D5376DA009B70D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736D51D5376DA009B70D9 /* AppDelegate.m */; };
+		9FF736E71D5376DA009B70D9 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736D71D5376DA009B70D9 /* CardCell.m */; };
+		9FF736E81D5376DA009B70D9 /* CardNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736D91D5376DA009B70D9 /* CardNode.m */; };
+		9FF736E91D5376DA009B70D9 /* Factories.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736DB1D5376DA009B70D9 /* Factories.m */; };
+		9FF736EA1D5376DA009B70D9 /* GradientNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736DD1D5376DA009B70D9 /* GradientNode.m */; };
+		9FF736EB1D5376DA009B70D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736DE1D5376DA009B70D9 /* main.m */; };
+		9FF736EC1D5376DA009B70D9 /* RainforestCardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736E01D5376DA009B70D9 /* RainforestCardInfo.m */; };
+		9FF736ED1D5376DA009B70D9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736E21D5376DA009B70D9 /* UIImage+ImageEffects.m */; };
+		9FF736EE1D5376DA009B70D9 /* AnimalPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF736E41D5376DA009B70D9 /* AnimalPagerController.m */; };
+		9FF736F11D5376E3009B70D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF736F01D5376E3009B70D9 /* Assets.xcassets */; };
+		AECCF9931E1459CE003C07F8 /* ASImageNode+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = AECCF9921E1459CE003C07F8 /* ASImageNode+Placeholder.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05EC2B0E367061DEE2086F2E /* Pods-AsyncDisplayKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncDisplayKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsyncDisplayKit/Pods-AsyncDisplayKit.debug.xcconfig"; sourceTree = "<group>"; };
+		33863C42D1172D58525C30A2 /* libPods-AsyncDisplayKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AsyncDisplayKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		868B159D652C0E04F8059D12 /* libPods-RainForestStarter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RainForestStarter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A880EE273D8DCBC72BA068B /* Pods-AsyncDisplayKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncDisplayKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsyncDisplayKit/Pods-AsyncDisplayKit.release.xcconfig"; sourceTree = "<group>"; };
+		9F7D350D1D537A8100E73C90 /* CardNode_InterfaceCallbacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardNode_InterfaceCallbacks.m; path = Source/CardNode_InterfaceCallbacks.m; sourceTree = "<group>"; };
+		9F7D350E1D537A8100E73C90 /* CardNode_InterfaceCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardNode_InterfaceCallbacks.h; path = Source/CardNode_InterfaceCallbacks.h; sourceTree = "<group>"; };
+		9FF736D21D5376DA009B70D9 /* AnimalTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalTableController.h; path = Source/AnimalTableController.h; sourceTree = "<group>"; };
+		9FF736D31D5376DA009B70D9 /* AnimalTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalTableController.m; path = Source/AnimalTableController.m; sourceTree = "<group>"; };
+		9FF736D41D5376DA009B70D9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Source/AppDelegate.h; sourceTree = "<group>"; };
+		9FF736D51D5376DA009B70D9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Source/AppDelegate.m; sourceTree = "<group>"; };
+		9FF736D61D5376DA009B70D9 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		9FF736D71D5376DA009B70D9 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		9FF736D81D5376DA009B70D9 /* CardNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardNode.h; sourceTree = "<group>"; };
+		9FF736D91D5376DA009B70D9 /* CardNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardNode.m; sourceTree = "<group>"; };
+		9FF736DA1D5376DA009B70D9 /* Factories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factories.h; sourceTree = "<group>"; };
+		9FF736DB1D5376DA009B70D9 /* Factories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factories.m; sourceTree = "<group>"; };
+		9FF736DC1D5376DA009B70D9 /* GradientNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientNode.h; sourceTree = "<group>"; };
+		9FF736DD1D5376DA009B70D9 /* GradientNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientNode.m; sourceTree = "<group>"; };
+		9FF736DE1D5376DA009B70D9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9FF736DF1D5376DA009B70D9 /* RainforestCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainforestCardInfo.h; sourceTree = "<group>"; };
+		9FF736E01D5376DA009B70D9 /* RainforestCardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RainforestCardInfo.m; sourceTree = "<group>"; };
+		9FF736E11D5376DA009B70D9 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		9FF736E21D5376DA009B70D9 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		9FF736E31D5376DA009B70D9 /* AnimalPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalPagerController.h; path = Source/AnimalPagerController.h; sourceTree = "<group>"; };
+		9FF736E41D5376DA009B70D9 /* AnimalPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalPagerController.m; path = Source/AnimalPagerController.m; sourceTree = "<group>"; };
+		9FF736F01D5376E3009B70D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FF736F41D53770B009B70D9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE2FB48A1C821D0C003AD243 /* AsyncDisplayKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncDisplayKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AECCF9911E1459CE003C07F8 /* ASImageNode+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASImageNode+Placeholder.h"; sourceTree = "<group>"; };
+		AECCF9921E1459CE003C07F8 /* ASImageNode+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ASImageNode+Placeholder.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE2FB4871C821D0C003AD243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A210D61D5A4363BAE7ED3F /* libPods-RainForestStarter.a in Frameworks */,
+				493EC9EAE29C5F5C34E38D6D /* libPods-AsyncDisplayKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		314666EBD13C8F28B927FD1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05EC2B0E367061DEE2086F2E /* Pods-AsyncDisplayKit.debug.xcconfig */,
+				9A880EE273D8DCBC72BA068B /* Pods-AsyncDisplayKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		73C727867EE58DC2E3A924B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				868B159D652C0E04F8059D12 /* libPods-RainForestStarter.a */,
+				33863C42D1172D58525C30A2 /* libPods-AsyncDisplayKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FF736D11D5376DA009B70D9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9FF736D61D5376DA009B70D9 /* CardCell.h */,
+				9FF736D71D5376DA009B70D9 /* CardCell.m */,
+				9FF736D81D5376DA009B70D9 /* CardNode.h */,
+				9FF736D91D5376DA009B70D9 /* CardNode.m */,
+				9FF736DA1D5376DA009B70D9 /* Factories.h */,
+				9FF736DB1D5376DA009B70D9 /* Factories.m */,
+				9FF736DC1D5376DA009B70D9 /* GradientNode.h */,
+				9FF736DD1D5376DA009B70D9 /* GradientNode.m */,
+				9FF736DE1D5376DA009B70D9 /* main.m */,
+				9FF736DF1D5376DA009B70D9 /* RainforestCardInfo.h */,
+				9FF736E01D5376DA009B70D9 /* RainforestCardInfo.m */,
+				9FF736E11D5376DA009B70D9 /* UIImage+ImageEffects.h */,
+				9FF736E21D5376DA009B70D9 /* UIImage+ImageEffects.m */,
+				AECCF9911E1459CE003C07F8 /* ASImageNode+Placeholder.h */,
+				AECCF9921E1459CE003C07F8 /* ASImageNode+Placeholder.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		9FF736EF1D5376E3009B70D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FF736F01D5376E3009B70D9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE2FB4811C821D0C003AD243 = {
+			isa = PBXGroup;
+			children = (
+				9FF736D21D5376DA009B70D9 /* AnimalTableController.h */,
+				9FF736D31D5376DA009B70D9 /* AnimalTableController.m */,
+				9F7D350E1D537A8100E73C90 /* CardNode_InterfaceCallbacks.h */,
+				9F7D350D1D537A8100E73C90 /* CardNode_InterfaceCallbacks.m */,
+				9FF736D41D5376DA009B70D9 /* AppDelegate.h */,
+				9FF736D51D5376DA009B70D9 /* AppDelegate.m */,
+				9FF736E31D5376DA009B70D9 /* AnimalPagerController.h */,
+				9FF736E41D5376DA009B70D9 /* AnimalPagerController.m */,
+				9FF736D11D5376DA009B70D9 /* Source */,
+				9FF736EF1D5376E3009B70D9 /* Resources */,
+				AE2FB48B1C821D0C003AD243 /* Products */,
+				9FF736F41D53770B009B70D9 /* Info.plist */,
+				314666EBD13C8F28B927FD1B /* Pods */,
+				73C727867EE58DC2E3A924B2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE2FB48B1C821D0C003AD243 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE2FB48A1C821D0C003AD243 /* AsyncDisplayKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE2FB4891C821D0C003AD243 /* AsyncDisplayKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE2FB4A11C821D0C003AD243 /* Build configuration list for PBXNativeTarget "AsyncDisplayKit" */;
+			buildPhases = (
+				731FACD2E6E1D0241FC08DD5 /* [CP] Check Pods Manifest.lock */,
+				AE2FB4861C821D0C003AD243 /* Sources */,
+				AE2FB4871C821D0C003AD243 /* Frameworks */,
+				AE2FB4881C821D0C003AD243 /* Resources */,
+				ADC0A28B8F66AF1663E3F8B2 /* [CP] Embed Pods Frameworks */,
+				040C51ADD4AF19CE00659E5C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsyncDisplayKit;
+			productName = RainForestFinal;
+			productReference = AE2FB48A1C821D0C003AD243 /* AsyncDisplayKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE2FB4821C821D0C003AD243 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Razeware LLC";
+				TargetAttributes = {
+					AE2FB4891C821D0C003AD243 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 8M63B65N66;
+					};
+				};
+			};
+			buildConfigurationList = AE2FB4851C821D0C003AD243 /* Build configuration list for PBXProject "AsyncDisplayKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE2FB4811C821D0C003AD243;
+			productRefGroup = AE2FB48B1C821D0C003AD243 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE2FB4891C821D0C003AD243 /* AsyncDisplayKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE2FB4881C821D0C003AD243 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF736F11D5376E3009B70D9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		040C51ADD4AF19CE00659E5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AsyncDisplayKit/Pods-AsyncDisplayKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		731FACD2E6E1D0241FC08DD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADC0A28B8F66AF1663E3F8B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AsyncDisplayKit/Pods-AsyncDisplayKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE2FB4861C821D0C003AD243 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F7D350F1D537A8100E73C90 /* CardNode_InterfaceCallbacks.m in Sources */,
+				9FF736E71D5376DA009B70D9 /* CardCell.m in Sources */,
+				9FF736EA1D5376DA009B70D9 /* GradientNode.m in Sources */,
+				AECCF9931E1459CE003C07F8 /* ASImageNode+Placeholder.m in Sources */,
+				9FF736EC1D5376DA009B70D9 /* RainforestCardInfo.m in Sources */,
+				9FF736E81D5376DA009B70D9 /* CardNode.m in Sources */,
+				9FF736EE1D5376DA009B70D9 /* AnimalPagerController.m in Sources */,
+				9FF736E61D5376DA009B70D9 /* AppDelegate.m in Sources */,
+				9FF736ED1D5376DA009B70D9 /* UIImage+ImageEffects.m in Sources */,
+				9FF736E51D5376DA009B70D9 /* AnimalTableController.m in Sources */,
+				9FF736EB1D5376DA009B70D9 /* main.m in Sources */,
+				9FF736E91D5376DA009B70D9 /* Factories.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AE2FB49F1C821D0C003AD243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AE2FB4A01C821D0C003AD243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE2FB4A21C821D0C003AD243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05EC2B0E367061DEE2086F2E /* Pods-AsyncDisplayKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8M63B65N66;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quangtqag.AsyncDisplayKit;
+				PRODUCT_NAME = AsyncDisplayKit;
+			};
+			name = Debug;
+		};
+		AE2FB4A31C821D0C003AD243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A880EE273D8DCBC72BA068B /* Pods-AsyncDisplayKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8M63B65N66;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quangtqag.AsyncDisplayKit;
+				PRODUCT_NAME = AsyncDisplayKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE2FB4851C821D0C003AD243 /* Build configuration list for PBXProject "AsyncDisplayKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2FB49F1C821D0C003AD243 /* Debug */,
+				AE2FB4A01C821D0C003AD243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE2FB4A11C821D0C003AD243 /* Build configuration list for PBXNativeTarget "AsyncDisplayKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2FB4A21C821D0C003AD243 /* Debug */,
+				AE2FB4A31C821D0C003AD243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE2FB4821C821D0C003AD243 /* Project object */;
+}

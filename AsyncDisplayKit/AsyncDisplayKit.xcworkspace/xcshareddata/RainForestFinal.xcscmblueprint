@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "715D22DEADB1DB6F1E0A4285CD2E0B6D13BF5FFF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "715D22DEADB1DB6F1E0A4285CD2E0B6D13BF5FFF" : 0,
+    "F50970FDD9A73637F0802C23B728B6B5862D49A6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "24AB9011-8BEE-4F14-B523-C364FAFF0C6A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "715D22DEADB1DB6F1E0A4285CD2E0B6D13BF5FFF" : "RainForestFinal\/",
+    "F50970FDD9A73637F0802C23B728B6B5862D49A6" : "OpenSource\/AsyncDisplayKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RainForestFinal",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RainForestFinal.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:lappp9\/AsyncTutorialSampleApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "715D22DEADB1DB6F1E0A4285CD2E0B6D13BF5FFF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:lappp9\/AsyncDisplayKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F50970FDD9A73637F0802C23B728B6B5862D49A6"
+    }
+  ]
+}
