@@ -8,6 +8,22 @@
 
 #import "CardCell.h"
 
+@interface CardCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *featuredImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *faceImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *eyeImageView;
+@property (weak, nonatomic) IBOutlet UILabel *viewLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *commentImageView;
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *heartImageView;
+@property (weak, nonatomic) IBOutlet UILabel *likeLabel;
+
+@end
+
 @implementation CardCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -26,8 +42,18 @@
   return self;
 }
 
+-(void)setCourse:(Course *)c {
+  self.featuredImageView.image = [UIImage imageNamed:c.featuredImageName];
+  self.titleLabel.text = c.title;
+  self.faceImageView.image = [UIImage imageNamed:c.authorAvatarName];
+  self.nameLabel.text = c.authorName;
+  self.descLabel.text = c.desc;
+  self.viewLabel.text = [NSString stringWithFormat:@"%ld", c.views];
+  self.commentLabel.text = [NSString stringWithFormat:@"%ld", c.comments];
+  self.likeLabel.text = [NSString stringWithFormat:@"%ld", c.likes];
+}
+
 -(void)config {
-  
   self.contentView.layer.cornerRadius = 5;
   self.contentView.layer.masksToBounds = YES;
   self.contentView.layer.borderColor = [[UIColor lightGrayColor] CGColor];

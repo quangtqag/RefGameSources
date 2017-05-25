@@ -11,4 +11,6 @@
 
 @interface NumberCollectionViewController : NSObject<UICollectionViewDelegate, UICollectionViewDataSource>
 
+@property(nonatomic, assign) NSUInteger amount;
+
 @end

@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Course.h"
 
 @interface CardCollectionViewController : NSObject<UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property(nonatomic, strong, nonnull) NSArray<Course*>* courses;
+@property(assign) CGFloat cellWidth;
+@property(assign) NSUInteger numOfItems;
+@property(nonatomic, copy, nullable) void (^collectionViewDidScrollPercent)(CGFloat);
 
 @end

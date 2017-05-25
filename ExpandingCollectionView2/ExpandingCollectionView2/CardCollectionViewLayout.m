@@ -12,7 +12,6 @@
 
 @property(nonatomic, strong) NSMutableArray<UICollectionViewLayoutAttributes *> *cache;
 @property(nonatomic, readonly) NSInteger numberOfItems;
-@property(nonatomic, readonly) CGFloat cellWidth;
 @property(nonatomic, readonly) CGFloat cellHeight;
 @property(nonatomic, readonly) CGFloat collectionViewWidth;
 @property(nonatomic, readonly) CGFloat collectionViewHeight;
@@ -22,13 +21,10 @@
 @implementation CardCollectionViewLayout
 
 const CGFloat kNonFeaturedScale = 0.8;
+const CGFloat kNonFeaturedAlpha = 0.6;
 
 -(NSInteger)numberOfItems {
   return [self.collectionView numberOfItemsInSection:0];
-}
-
--(CGFloat)cellWidth {
-  return 200;
 }
 
 -(CGFloat)cellHeight {
@@ -82,14 +78,17 @@ const CGFloat kNonFeaturedScale = 0.8;
     if (i == [self featuredItemIndex]) {
       CGFloat scale = 1 - ((1 - kNonFeaturedScale) * [self nextItemPercentageOffset]);
       attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+      attributes.alpha = 1 - ((1 - kNonFeaturedAlpha) * [self nextItemPercentageOffset]);
     }
     else if (i == [self featuredItemIndex] + 1) {
       CGFloat scale = kNonFeaturedScale + ((1 - kNonFeaturedScale) * [self nextItemPercentageOffset]);
       attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+      attributes.alpha = kNonFeaturedAlpha + ((1 - kNonFeaturedAlpha) * [self nextItemPercentageOffset]);
     }
     else {
       CGFloat scale = kNonFeaturedScale;
       attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+      attributes.alpha = kNonFeaturedAlpha;
     }
     
     [self.cache addObject:attributes];
@@ -111,6 +110,8 @@ const CGFloat kNonFeaturedScale = 0.8;
   CGFloat xOffset = itemIndex * self.cellWidth;
   return CGPointMake(xOffset, 0);
 }
+
+
 
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
   return YES;

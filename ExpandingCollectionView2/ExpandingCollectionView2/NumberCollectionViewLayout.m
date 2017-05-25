@@ -13,7 +13,6 @@
 @property(nonatomic, strong) NSMutableArray<UICollectionViewLayoutAttributes *> *cache;
 @property(nonatomic, readonly) NSInteger numberOfItems;
 @property(nonatomic, readonly) CGFloat cellWidth;
-@property(nonatomic, readonly) CGFloat cellHeight;
 @property(nonatomic, readonly) CGFloat collectionViewWidth;
 @property(nonatomic, readonly) CGFloat collectionViewHeight;
 
@@ -28,10 +27,6 @@
 
 -(CGFloat)cellWidth {
   return self.collectionView.bounds.size.width;
-}
-
--(CGFloat)cellHeight {
-  return 60;
 }
 
 -(CGFloat)collectionViewWidth {

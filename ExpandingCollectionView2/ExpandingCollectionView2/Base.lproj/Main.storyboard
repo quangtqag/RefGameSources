@@ -311,6 +311,7 @@
                     <connections>
                         <outlet property="cardCollectionView" destination="Rvm-vV-9be" id="lpK-ik-Tkc"/>
                         <outlet property="numberCollectionView" destination="9Np-jA-kHz" id="nRV-0a-cJO"/>
+                        <outlet property="totalCoursesLabel" destination="I70-FP-fyp" id="zRd-5W-FwX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

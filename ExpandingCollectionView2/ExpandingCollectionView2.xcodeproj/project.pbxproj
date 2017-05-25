@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D95E9D061ED67486000DF821 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E9D051ED67486000DF821 /* Course.m */; };
+		D95E9D0A1ED6750F000DF821 /* Commenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E9D091ED6750F000DF821 /* Commenter.m */; };
 		D968D6CD1ED51F950079044E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D968D6CC1ED51F950079044E /* main.m */; };
 		D968D6D01ED51F950079044E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D968D6CF1ED51F950079044E /* AppDelegate.m */; };
 		D968D6D31ED51F950079044E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D968D6D21ED51F950079044E /* ViewController.m */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D95E9D041ED67486000DF821 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		D95E9D051ED67486000DF821 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		D95E9D081ED6750F000DF821 /* Commenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Commenter.h; sourceTree = "<group>"; };
+		D95E9D091ED6750F000DF821 /* Commenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Commenter.m; sourceTree = "<group>"; };
 		D968D6C81ED51F950079044E /* ExpandingCollectionView2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandingCollectionView2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D968D6CC1ED51F950079044E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D968D6CE1ED51F950079044E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D95E9D071ED6748F000DF821 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D95E9D041ED67486000DF821 /* Course.h */,
+				D95E9D051ED67486000DF821 /* Course.m */,
+				D95E9D081ED6750F000DF821 /* Commenter.h */,
+				D95E9D091ED6750F000DF821 /* Commenter.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		D968D6BF1ED51F950079044E = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +101,10 @@
 				D968D6CE1ED51F950079044E /* AppDelegate.h */,
 				D968D6CF1ED51F950079044E /* AppDelegate.m */,
 				D9D190941ED5896900A6A187 /* View Controllers */,
+				D9D1908F1ED586ED00A6A187 /* Collection View Controllers */,
 				D9D190901ED5871400A6A187 /* Collection View Layouts */,
 				D9D1908E1ED586D300A6A187 /* Cells */,
-				D9D1908F1ED586ED00A6A187 /* Collection View Controllers */,
+				D95E9D071ED6748F000DF821 /* Models */,
 				D9D190911ED5872000A6A187 /* Utils */,
 				D9D190921ED5873500A6A187 /* UI */,
 				D9D190931ED5873E00A6A187 /* Other */,
@@ -246,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95E9D0A1ED6750F000DF821 /* Commenter.m in Sources */,
 				D9D1907E1ED53FD000A6A187 /* UIColor+Ext.m in Sources */,
 				D968D6D31ED51F950079044E /* ViewController.m in Sources */,
 				D968D6D01ED51F950079044E /* AppDelegate.m in Sources */,
+				D95E9D061ED67486000DF821 /* Course.m in Sources */,
 				D9D1908D1ED582BC00A6A187 /* NumberCollectionViewLayout.m in Sources */,
 				D9D190811ED5679700A6A187 /* CardCell.m in Sources */,
 				D9D1907B1ED52BC500A6A187 /* CardCollectionViewLayout.m in Sources */,
