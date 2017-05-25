@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9263D2B1ED6B40500253CA0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9263D2A1ED6B40500253CA0 /* DetailViewController.m */; };
+		D9263D2E1ED6C1FD00253CA0 /* CommenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9263D2D1ED6C1FD00253CA0 /* CommenterCell.m */; };
 		D95E9D061ED67486000DF821 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E9D051ED67486000DF821 /* Course.m */; };
 		D95E9D0A1ED6750F000DF821 /* Commenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E9D091ED6750F000DF821 /* Commenter.m */; };
 		D968D6CD1ED51F950079044E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D968D6CC1ED51F950079044E /* main.m */; };
@@ -18,14 +20,16 @@
 		D9D1907B1ED52BC500A6A187 /* CardCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D1907A1ED52BC500A6A187 /* CardCollectionViewLayout.m */; };
 		D9D1907E1ED53FD000A6A187 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D1907D1ED53FD000A6A187 /* UIColor+Ext.m */; };
 		D9D190811ED5679700A6A187 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D190801ED5679700A6A187 /* CardCell.m */; };
-		D9D190841ED57A4700A6A187 /* CardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D190831ED57A4700A6A187 /* CardCollectionViewController.m */; };
-		D9D190871ED5821600A6A187 /* NumberCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D190861ED5821600A6A187 /* NumberCollectionViewController.m */; };
 		D9D1908A1ED5825A00A6A187 /* NumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D190891ED5825A00A6A187 /* NumberCell.m */; };
 		D9D1908D1ED582BC00A6A187 /* NumberCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D1908C1ED582BC00A6A187 /* NumberCollectionViewLayout.m */; };
 		D9D190961ED5988400A6A187 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D9D190951ED5988400A6A187 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D9263D291ED6B40500253CA0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D9263D2A1ED6B40500253CA0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D9263D2C1ED6C1FD00253CA0 /* CommenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommenterCell.h; sourceTree = "<group>"; };
+		D9263D2D1ED6C1FD00253CA0 /* CommenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommenterCell.m; sourceTree = "<group>"; };
 		D95E9D041ED67486000DF821 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		D95E9D051ED67486000DF821 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		D95E9D081ED6750F000DF821 /* Commenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Commenter.h; sourceTree = "<group>"; };
@@ -46,10 +50,6 @@
 		D9D1907D1ED53FD000A6A187 /* UIColor+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ext.m"; sourceTree = "<group>"; };
 		D9D1907F1ED5679700A6A187 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
 		D9D190801ED5679700A6A187 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
-		D9D190821ED57A4700A6A187 /* CardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewController.h; sourceTree = "<group>"; };
-		D9D190831ED57A4700A6A187 /* CardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewController.m; sourceTree = "<group>"; };
-		D9D190851ED5821600A6A187 /* NumberCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberCollectionViewController.h; sourceTree = "<group>"; };
-		D9D190861ED5821600A6A187 /* NumberCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberCollectionViewController.m; sourceTree = "<group>"; };
 		D9D190881ED5825A00A6A187 /* NumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberCell.h; sourceTree = "<group>"; };
 		D9D190891ED5825A00A6A187 /* NumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberCell.m; sourceTree = "<group>"; };
 		D9D1908B1ED582BC00A6A187 /* NumberCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -101,7 +101,6 @@
 				D968D6CE1ED51F950079044E /* AppDelegate.h */,
 				D968D6CF1ED51F950079044E /* AppDelegate.m */,
 				D9D190941ED5896900A6A187 /* View Controllers */,
-				D9D1908F1ED586ED00A6A187 /* Collection View Controllers */,
 				D9D190901ED5871400A6A187 /* Collection View Layouts */,
 				D9D1908E1ED586D300A6A187 /* Cells */,
 				D95E9D071ED6748F000DF821 /* Models */,
@@ -128,19 +127,10 @@
 				D9D190801ED5679700A6A187 /* CardCell.m */,
 				D9D190881ED5825A00A6A187 /* NumberCell.h */,
 				D9D190891ED5825A00A6A187 /* NumberCell.m */,
+				D9263D2C1ED6C1FD00253CA0 /* CommenterCell.h */,
+				D9263D2D1ED6C1FD00253CA0 /* CommenterCell.m */,
 			);
 			name = Cells;
-			sourceTree = "<group>";
-		};
-		D9D1908F1ED586ED00A6A187 /* Collection View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D9D190821ED57A4700A6A187 /* CardCollectionViewController.h */,
-				D9D190831ED57A4700A6A187 /* CardCollectionViewController.m */,
-				D9D190851ED5821600A6A187 /* NumberCollectionViewController.h */,
-				D9D190861ED5821600A6A187 /* NumberCollectionViewController.m */,
-			);
-			name = "Collection View Controllers";
 			sourceTree = "<group>";
 		};
 		D9D190901ED5871400A6A187 /* Collection View Layouts */ = {
@@ -187,6 +177,8 @@
 			children = (
 				D968D6D11ED51F950079044E /* ViewController.h */,
 				D968D6D21ED51F950079044E /* ViewController.m */,
+				D9263D291ED6B40500253CA0 /* DetailViewController.h */,
+				D9263D2A1ED6B40500253CA0 /* DetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -272,10 +264,10 @@
 				D9D1908D1ED582BC00A6A187 /* NumberCollectionViewLayout.m in Sources */,
 				D9D190811ED5679700A6A187 /* CardCell.m in Sources */,
 				D9D1907B1ED52BC500A6A187 /* CardCollectionViewLayout.m in Sources */,
+				D9263D2E1ED6C1FD00253CA0 /* CommenterCell.m in Sources */,
 				D9D1908A1ED5825A00A6A187 /* NumberCell.m in Sources */,
+				D9263D2B1ED6B40500253CA0 /* DetailViewController.m in Sources */,
 				D968D6CD1ED51F950079044E /* main.m in Sources */,
-				D9D190871ED5821600A6A187 /* NumberCollectionViewController.m in Sources */,
-				D9D190841ED57A4700A6A187 /* CardCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
