@@ -21,10 +21,12 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *cardCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *numberCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *totalCoursesLabel;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
 
 @property(strong) NSArray<Course*>* courses;
 @property(strong) CardPresentAnimationController *cardPresentAnimationController;
 @property(strong) CardDismissAnimationController *cardDismissAnimationController;
+@property(strong) DetailViewController *detailViewController;
 @end
 
 @implementation ViewController
@@ -42,6 +44,15 @@ const CGFloat kCardCellWidth = 200;
   
   self.cardPresentAnimationController = [CardPresentAnimationController new];
   self.cardDismissAnimationController = [CardDismissAnimationController new];
+}
+
+- (IBAction)searchButtonDidTap:(UIButton *)sender {
+  [self.detailViewController dismissViewControllerAnimated:YES completion:nil];
+  [self changeBackIconToSearchIcon];
+}
+
+-(BOOL)prefersStatusBarHidden {
+  return YES;
 }
 
 -(NSArray<Course*>*)coursesData {
@@ -79,13 +90,36 @@ const CGFloat kCardCellWidth = 200;
   layout.cellWidth = kCardCellWidth;
 }
 
+-(void)changeSearchIconToBackIcon {
+  UIImage *backIcon = [UIImage imageNamed:@"back"];
+  [UIView transitionWithView:self.searchButton
+                    duration:0.5
+                     options:UIViewAnimationOptionTransitionFlipFromLeft
+                  animations:^{
+                    [self.searchButton setImage:backIcon forState:UIControlStateNormal];
+                  } completion:nil];
+}
+
+-(void)changeBackIconToSearchIcon {
+  UIImage *searchIcon = [UIImage imageNamed:@"search"];
+  [UIView transitionWithView:self.searchButton
+                    duration:0.5
+                     options:UIViewAnimationOptionTransitionFlipFromRight
+                  animations:^{
+                    [self.searchButton setImage:searchIcon forState:UIControlStateNormal];
+                  } completion:nil];
+}
+
+
 -(void)showDetailViewControllerWithCourse:(Course *)c {
-  DetailViewController *detailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DetailViewController"];
-  detailViewController.course = c;
-  detailViewController.transitioningDelegate = self;
-  [self presentViewController:detailViewController animated:YES completion:nil];
+  self.detailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DetailViewController"];
+  self.detailViewController.course = c;
+  self.detailViewController.transitioningDelegate = self;
+  [self presentViewController:self.detailViewController animated:YES completion:nil];
   
+  [self.cardCollectionView setUserInteractionEnabled:NO];
   [self animateExpandHideSiblingCells];
+  [self changeSearchIconToBackIcon];
 }
 
 -(void)animateExpandHideSiblingCells {
@@ -207,6 +241,7 @@ const CGFloat kCardCellWidth = 200;
   CGRect cellFrame = [cell convertRect:cell.contentView.frame toView:self.view];
   self.cardDismissAnimationController.destinationFrame = cellFrame;
   
+  [self.cardCollectionView setUserInteractionEnabled:YES];
   [self animateCollapseShowSiblingCells];
   
   return self.cardDismissAnimationController;
