@@ -6,11 +6,11 @@
 //  Copyright © 2017 Quang Tran. All rights reserved.
 //
 
-#import "CardAnimator.h"
+#import "CardPresentAnimationController.h"
 
-@implementation CardAnimator
+@implementation CardPresentAnimationController
 
-const NSTimeInterval duration = 5;
+const NSTimeInterval duration = 0.5;
 
 -(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
   return duration;
@@ -24,35 +24,24 @@ const NSTimeInterval duration = 5;
   CGRect initialFrame = self.originFrame;
   CGRect finalFrame = [transitionContext finalFrameForViewController:toVC];
   finalFrame = CGRectInset(finalFrame, 20, 0);
-  toVC.view.frame = finalFrame;
-  
-  UIGraphicsBeginImageContext(toVC.view.bounds.size);
-  [toVC.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-  UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
-  
-  UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
-  imgView.contentMode = UIViewContentModeTop;
-  imgView.frame = initialFrame;
-  imgView.layer.cornerRadius = 5;
-  imgView.layer.masksToBounds = YES;
+  toVC.view.frame = initialFrame;
+  toVC.view.layer.masksToBounds = YES;
   
   UIView *containerView = transitionContext.containerView;
   [containerView addSubview:[fromVC.view snapshotViewAfterScreenUpdates:YES]];
   [containerView addSubview:toVC.view];
-  toVC.view.hidden = YES;
-  [containerView addSubview:imgView];
+  
+  [toVC.view layoutIfNeeded];
   
   [UIView animateWithDuration:duration
                    animations:^{
-                     imgView.frame = finalFrame;
+                     toVC.view.frame = finalFrame;
+                     [toVC.view layoutIfNeeded];
                    }
                    completion:^(BOOL finished) {
-                     toVC.view.hidden = NO;
-                     [imgView removeFromSuperview];
+                     
                      [transitionContext completeTransition:YES];
                    }];
-  
 }
 
 @end

@@ -14,7 +14,7 @@
 #import "NumberCollectionViewLayout.h"
 #import "DetailViewController.h"
 #import "NumberCell.h"
-#import "CardAnimator.h"
+#import "CardPresentAnimationController.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *cardCollectionView;
@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalCoursesLabel;
 
 @property(strong) NSArray<Course*>* courses;
-@property(strong) CardAnimator *transition;
+@property(strong) CardPresentAnimationController *cardPresentAnimationController;
 @end
 
 @implementation ViewController
@@ -38,7 +38,7 @@ const CGFloat kCardCellWidth = 200;
   [self configCardCollectionView];
   [self configNumberCollectionView];
   
-  self.transition = [CardAnimator new];
+  self.cardPresentAnimationController = [CardPresentAnimationController new];
 }
 
 -(NSArray<Course*>*)coursesData {
@@ -130,8 +130,8 @@ const CGFloat kCardCellWidth = 200;
   NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
   CardCell *cell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:selectedIndexPath];
   CGRect cellFrame = [cell convertRect:cell.contentView.frame toView:nil];
-  self.transition.originFrame = cellFrame;
-  return self.transition;
+  self.cardPresentAnimationController.originFrame = cellFrame;
+  return self.cardPresentAnimationController;
 }
 
 @end

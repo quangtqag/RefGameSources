@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface CardAnimator : NSObject<UIViewControllerAnimatedTransitioning>
+@interface CardPresentAnimationController : NSObject<UIViewControllerAnimatedTransitioning>
 
 @property(nonatomic, assign) CGRect originFrame;
 
