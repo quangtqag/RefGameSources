@@ -6,9 +6,9 @@
 //  Copyright © 2017 Quang Tran. All rights reserved.
 //
 
-#import "CardPresentAnimationController.h"
+#import "CardDismissAnimationController.h"
 
-@implementation CardPresentAnimationController
+@implementation CardDismissAnimationController
 
 static const NSTimeInterval duration = 0.5;
 
@@ -21,27 +21,21 @@ static const NSTimeInterval duration = 0.5;
   UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
   UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
   
-  CGRect initialFrame = self.originFrame;
-  CGRect finalFrame = [transitionContext finalFrameForViewController:toVC];
-  finalFrame = CGRectInset(finalFrame, 20, 0);
-  toVC.view.frame = initialFrame;
-  toVC.view.layer.masksToBounds = YES;
-  toVC.view.layer.borderColor = [[UIColor darkGrayColor] CGColor];
-  toVC.view.layer.borderWidth = 0.5;
+  CGRect finalFrame = self.destinationFrame;
   
   UIView *containerView = transitionContext.containerView;
-  [containerView addSubview:[fromVC.view snapshotViewAfterScreenUpdates:YES]];
   [containerView addSubview:toVC.view];
+  [containerView addSubview:fromVC.view];
   
-  [toVC.view layoutIfNeeded];
+  [fromVC.view layoutIfNeeded];
   
   [UIView animateWithDuration:duration
                    animations:^{
-                     toVC.view.frame = finalFrame;
-                     [toVC.view layoutIfNeeded];
+                     fromVC.view.frame = finalFrame;
+                     [fromVC.view layoutIfNeeded];
                    }
                    completion:^(BOOL finished) {
-                     
+                     [fromVC.view removeFromSuperview];
                      [transitionContext completeTransition:YES];
                    }];
 }

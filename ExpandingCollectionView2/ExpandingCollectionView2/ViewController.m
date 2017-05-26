@@ -15,6 +15,7 @@
 #import "DetailViewController.h"
 #import "NumberCell.h"
 #import "CardPresentAnimationController.h"
+#import "CardDismissAnimationController.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *cardCollectionView;
@@ -23,6 +24,7 @@
 
 @property(strong) NSArray<Course*>* courses;
 @property(strong) CardPresentAnimationController *cardPresentAnimationController;
+@property(strong) CardDismissAnimationController *cardDismissAnimationController;
 @end
 
 @implementation ViewController
@@ -39,6 +41,7 @@ const CGFloat kCardCellWidth = 200;
   [self configNumberCollectionView];
   
   self.cardPresentAnimationController = [CardPresentAnimationController new];
+  self.cardDismissAnimationController = [CardDismissAnimationController new];
 }
 
 -(NSArray<Course*>*)coursesData {
@@ -129,9 +132,19 @@ const CGFloat kCardCellWidth = 200;
                                                                      sourceController:(UIViewController *)source {
   NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
   CardCell *cell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:selectedIndexPath];
-  CGRect cellFrame = [cell convertRect:cell.contentView.frame toView:nil];
+  CGRect cellFrame = [cell convertRect:cell.contentView.frame toView:self.view];
   self.cardPresentAnimationController.originFrame = cellFrame;
+  
   return self.cardPresentAnimationController;
+}
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+  NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
+  CardCell *cell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:selectedIndexPath];
+  CGRect cellFrame = [cell convertRect:cell.contentView.frame toView:self.view];
+  self.cardDismissAnimationController.destinationFrame = cellFrame;
+  
+  return self.cardDismissAnimationController;
 }
 
 @end
