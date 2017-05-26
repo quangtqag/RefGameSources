@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D9263D2B1ED6B40500253CA0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9263D2A1ED6B40500253CA0 /* DetailViewController.m */; };
 		D9263D2E1ED6C1FD00253CA0 /* CommenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9263D2D1ED6C1FD00253CA0 /* CommenterCell.m */; };
+		D9263D311ED6C97E00253CA0 /* CardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D9263D301ED6C97E00253CA0 /* CardAnimator.m */; };
 		D95E9D061ED67486000DF821 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E9D051ED67486000DF821 /* Course.m */; };
 		D95E9D0A1ED6750F000DF821 /* Commenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D95E9D091ED6750F000DF821 /* Commenter.m */; };
 		D968D6CD1ED51F950079044E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D968D6CC1ED51F950079044E /* main.m */; };
@@ -30,6 +31,8 @@
 		D9263D2A1ED6B40500253CA0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D9263D2C1ED6C1FD00253CA0 /* CommenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommenterCell.h; sourceTree = "<group>"; };
 		D9263D2D1ED6C1FD00253CA0 /* CommenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommenterCell.m; sourceTree = "<group>"; };
+		D9263D2F1ED6C97E00253CA0 /* CardAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardAnimator.h; sourceTree = "<group>"; };
+		D9263D301ED6C97E00253CA0 /* CardAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardAnimator.m; sourceTree = "<group>"; };
 		D95E9D041ED67486000DF821 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		D95E9D051ED67486000DF821 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		D95E9D081ED6750F000DF821 /* Commenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Commenter.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 			children = (
 				D968D6CE1ED51F950079044E /* AppDelegate.h */,
 				D968D6CF1ED51F950079044E /* AppDelegate.m */,
+				D9263D2F1ED6C97E00253CA0 /* CardAnimator.h */,
+				D9263D301ED6C97E00253CA0 /* CardAnimator.m */,
 				D9D190941ED5896900A6A187 /* View Controllers */,
 				D9D190901ED5871400A6A187 /* Collection View Layouts */,
 				D9D1908E1ED586D300A6A187 /* Cells */,
@@ -260,6 +265,7 @@
 				D9D1907E1ED53FD000A6A187 /* UIColor+Ext.m in Sources */,
 				D968D6D31ED51F950079044E /* ViewController.m in Sources */,
 				D968D6D01ED51F950079044E /* AppDelegate.m in Sources */,
+				D9263D311ED6C97E00253CA0 /* CardAnimator.m in Sources */,
 				D95E9D061ED67486000DF821 /* Course.m in Sources */,
 				D9D1908D1ED582BC00A6A187 /* NumberCollectionViewLayout.m in Sources */,
 				D9D190811ED5679700A6A187 /* CardCell.m in Sources */,

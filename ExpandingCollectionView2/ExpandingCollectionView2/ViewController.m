@@ -14,13 +14,15 @@
 #import "NumberCollectionViewLayout.h"
 #import "DetailViewController.h"
 #import "NumberCell.h"
+#import "CardAnimator.h"
 
-@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *cardCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *numberCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *totalCoursesLabel;
 
 @property(strong) NSArray<Course*>* courses;
+@property(strong) CardAnimator *transition;
 @end
 
 @implementation ViewController
@@ -35,6 +37,8 @@ const CGFloat kCardCellWidth = 200;
   self.totalCoursesLabel.text = [NSString stringWithFormat:@"%ld", self.courses.count];
   [self configCardCollectionView];
   [self configNumberCollectionView];
+  
+  self.transition = [CardAnimator new];
 }
 
 -(NSArray<Course*>*)coursesData {
@@ -75,7 +79,8 @@ const CGFloat kCardCellWidth = 200;
 -(void)showDetailViewControllerWithCourse:(Course *)c {
   DetailViewController *detailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DetailViewController"];
   detailViewController.course = c;
-  [self showViewController:detailViewController sender:self];
+  detailViewController.transitioningDelegate = self;
+  [self presentViewController:detailViewController animated:YES completion:nil];
 }
 
 #pragma mark - Collection View Delegate DataSource
@@ -116,6 +121,17 @@ const CGFloat kCardCellWidth = 200;
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
   NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
   [self showDetailViewControllerWithCourse:self.courses[selectedIndexPath.row]];
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                 presentingController:(UIViewController *)presenting
+                                                                     sourceController:(UIViewController *)source {
+  NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
+  CardCell *cell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:selectedIndexPath];
+  CGRect cellFrame = [cell convertRect:cell.contentView.frame toView:nil];
+  self.transition.originFrame = cellFrame;
+  return self.transition;
 }
 
 @end

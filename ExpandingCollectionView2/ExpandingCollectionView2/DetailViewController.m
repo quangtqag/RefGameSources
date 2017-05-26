@@ -37,6 +37,10 @@
   [self populateData];
 }
 
+- (IBAction)backButtonDidTap:(UIButton *)sender {
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(void)populateData {
   Course *c = self.course;
   self.featuredImageView.image = [UIImage imageNamed:c.featuredImageName];
