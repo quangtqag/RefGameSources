@@ -77,17 +77,20 @@ const CGFloat kNonFeaturedAlpha = 0.6;
 
     if (i == [self featuredItemIndex]) {
       CGFloat scale = 1 - ((1 - kNonFeaturedScale) * [self nextItemPercentageOffset]);
-      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+//      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+      attributes.transform = CGAffineTransformMakeScale(scale, scale);
       attributes.alpha = 1 - ((1 - kNonFeaturedAlpha) * [self nextItemPercentageOffset]);
     }
     else if (i == [self featuredItemIndex] + 1) {
       CGFloat scale = kNonFeaturedScale + ((1 - kNonFeaturedScale) * [self nextItemPercentageOffset]);
-      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+//      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+      attributes.transform = CGAffineTransformMakeScale(scale, scale);
       attributes.alpha = kNonFeaturedAlpha + ((1 - kNonFeaturedAlpha) * [self nextItemPercentageOffset]);
     }
     else {
       CGFloat scale = kNonFeaturedScale;
-      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+//      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
+      attributes.transform = CGAffineTransformMakeScale(scale, scale);
       attributes.alpha = kNonFeaturedAlpha;
     }
     

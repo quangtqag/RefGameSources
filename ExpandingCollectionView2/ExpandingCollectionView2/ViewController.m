@@ -84,6 +84,65 @@ const CGFloat kCardCellWidth = 200;
   detailViewController.course = c;
   detailViewController.transitioningDelegate = self;
   [self presentViewController:detailViewController animated:YES completion:nil];
+  
+  [self animateExpandHideSiblingCells];
+}
+
+-(void)animateExpandHideSiblingCells {
+  NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
+  CardCell *previousCell;
+  CardCell *nextCell;
+  
+  if (selectedIndexPath.row - 1 >= 0) {
+    NSIndexPath *previousIndexPath = [NSIndexPath indexPathForRow:(selectedIndexPath.row - 1) inSection:0];
+    previousCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:previousIndexPath];
+  }
+  
+  if (selectedIndexPath.row + 1 < self.courses.count) {
+    NSIndexPath *nextIndexPath = [NSIndexPath indexPathForRow:(selectedIndexPath.row + 1) inSection:0];
+    nextCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:nextIndexPath];
+  }
+  
+  CGAffineTransform translateBackward = CGAffineTransformMakeTranslation(-60, 0);
+  CGAffineTransform transformBackward = CGAffineTransformScale(translateBackward, 0.8, 0.8);
+  CGAffineTransform translateForward = CGAffineTransformMakeTranslation(60, 0);
+  CGAffineTransform transformForward = CGAffineTransformScale(translateForward, 0.8, 0.8);
+  [UIView animateWithDuration:0.5
+                   animations:^{
+                     if (previousCell != nil) {
+                       previousCell.transform = transformBackward;
+                     }
+                     if (nextCell != nil) {
+                       nextCell.transform = transformForward;
+                     }
+                   }];
+}
+
+-(void)animateCollapseShowSiblingCells {
+  NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
+  CardCell *previousCell;
+  CardCell *nextCell;
+  
+  if (selectedIndexPath.row - 1 >= 0) {
+    NSIndexPath *previousIndexPath = [NSIndexPath indexPathForRow:(selectedIndexPath.row - 1) inSection:0];
+    previousCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:previousIndexPath];
+  }
+  
+  if (selectedIndexPath.row + 1 < self.courses.count) {
+    NSIndexPath *nextIndexPath = [NSIndexPath indexPathForRow:(selectedIndexPath.row + 1) inSection:0];
+    nextCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:nextIndexPath];
+  }
+  
+  CGAffineTransform transform = CGAffineTransformMakeScale(0.8, 0.8);
+  [UIView animateWithDuration:0.5
+                   animations:^{
+                     if (previousCell != nil) {
+                       previousCell.transform = transform;
+                     }
+                     if (nextCell != nil) {
+                       nextCell.transform = transform;
+                     }
+                   }];
 }
 
 #pragma mark - Collection View Delegate DataSource
@@ -123,7 +182,11 @@ const CGFloat kCardCellWidth = 200;
 
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
   NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
-  [self showDetailViewControllerWithCourse:self.courses[selectedIndexPath.row]];
+  
+  // Put in asyn block to make sure that the animation done correctly.
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self showDetailViewControllerWithCourse:self.courses[selectedIndexPath.row]];
+  });
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
@@ -143,6 +206,8 @@ const CGFloat kCardCellWidth = 200;
   CardCell *cell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:selectedIndexPath];
   CGRect cellFrame = [cell convertRect:cell.contentView.frame toView:self.view];
   self.cardDismissAnimationController.destinationFrame = cellFrame;
+  
+  [self animateCollapseShowSiblingCells];
   
   return self.cardDismissAnimationController;
 }

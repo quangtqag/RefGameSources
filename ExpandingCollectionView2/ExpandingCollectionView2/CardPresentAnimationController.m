@@ -29,11 +29,14 @@ static const NSTimeInterval duration = 0.5;
   toVC.view.layer.borderColor = [[UIColor darkGrayColor] CGColor];
   toVC.view.layer.borderWidth = 0.5;
   
+  [fromVC.view setUserInteractionEnabled:NO];
+  [toVC.view layoutIfNeeded];
+  
   UIView *containerView = transitionContext.containerView;
-  [containerView addSubview:[fromVC.view snapshotViewAfterScreenUpdates:YES]];
+  [containerView addSubview:fromVC.view];
+//  [containerView addSubview:[fromVC.view snapshotViewAfterScreenUpdates:YES]];
   [containerView addSubview:toVC.view];
   
-  [toVC.view layoutIfNeeded];
   
   [UIView animateWithDuration:duration
                    animations:^{
@@ -41,8 +44,10 @@ static const NSTimeInterval duration = 0.5;
                      [toVC.view layoutIfNeeded];
                    }
                    completion:^(BOOL finished) {
-                     
                      [transitionContext completeTransition:YES];
+                     
+                     [containerView addSubview:fromVC.view];
+                     [containerView sendSubviewToBack:fromVC.view];
                    }];
 }
 
