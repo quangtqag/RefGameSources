@@ -46,7 +46,7 @@ const CGFloat kBgOffsetWidth = 100;
   [super viewDidLoad];
   
   self.courses = [self coursesData];
-  self.totalCoursesLabel.text = [NSString stringWithFormat:@"%ld", self.courses.count];
+  self.totalCoursesLabel.text = [NSString stringWithFormat:@"%ld", (unsigned long)self.courses.count];
   
   [self configCardCollectionView];
   [self configNumberCollectionView];
@@ -84,6 +84,7 @@ const CGFloat kBgOffsetWidth = 100;
   self.bgCollectionView.delegate = self;
   self.bgCollectionView.dataSource = self;
   self.bgCollectionView.showsHorizontalScrollIndicator = NO;
+  [self.bgCollectionView setUserInteractionEnabled:NO];
   BgCollectionViewLayout *layout = (BgCollectionViewLayout*)self.bgCollectionView.collectionViewLayout;
   layout.offsetWidth = kBgOffsetWidth;
 }
