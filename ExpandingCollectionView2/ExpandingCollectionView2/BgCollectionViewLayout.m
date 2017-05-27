@@ -56,6 +56,8 @@
   }
   
   CGFloat cellHeight = self.collectionView.bounds.size.height;
+  
+  // The cell width will extend 2 sides with a constant
   CGFloat cellWidth = self.offsetWidth + self.collectionView.bounds.size.width + self.offsetWidth;
   
   for (int i = 0; i < self.numberOfItems; i++) {

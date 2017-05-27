@@ -30,12 +30,12 @@ static const CGFloat offsetLeftRight = 20;
   finalFrame.size.height -= offsetTop;
   toVC.view.frame = initialFrame;
   toVC.view.layer.masksToBounds = YES;
+  // Force recalculate layout
   [toVC.view layoutIfNeeded];
   
   UIView *containerView = transitionContext.containerView;
   [containerView addSubview:fromVC.view];
   [containerView addSubview:toVC.view];
-  
   
   [UIView animateWithDuration:duration
                    animations:^{
@@ -45,6 +45,7 @@ static const CGFloat offsetLeftRight = 20;
                    completion:^(BOOL finished) {
                      [transitionContext completeTransition:YES];
                      
+                     // After animated, from view auto disappear (perhaps a bug from frameword), so just re-add it
                      [containerView addSubview:fromVC.view];
                      [containerView sendSubviewToBack:fromVC.view];
                    }];

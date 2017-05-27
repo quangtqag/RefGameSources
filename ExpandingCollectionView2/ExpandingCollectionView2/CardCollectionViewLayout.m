@@ -80,22 +80,26 @@ const CGFloat kNonFeaturedAlpha = 0.6;
                                   0,
                                   self.cellWidth,
                                   self.cellHeight);
-
+    // Only 2 cell change scale and alpha are featured cell and sibling cell
+    // When move: featured cell will decrease alpha and scale
+    // While that sibling cell will increase alpha and scale
+    // Remaining cells will have alpha and scale lowest that set by a constant
     if (i == [self featuredItemIndex]) {
+      NSLog(@"111 i = %d", i);
       CGFloat scale = 1 - ((1 - kNonFeaturedScale) * [self nextItemPercentageOffset]);
-//      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
       attributes.transform = CGAffineTransformMakeScale(scale, scale);
       attributes.alpha = 1 - ((1 - kNonFeaturedAlpha) * [self nextItemPercentageOffset]);
     }
-    else if (i == [self featuredItemIndex] + 1) {
+    else if (i == [self featuredItemIndex] + 1
+             || i == [self featuredItemIndex] - 1) {
+      NSLog(@"222 i = %d", i);
       CGFloat scale = kNonFeaturedScale + ((1 - kNonFeaturedScale) * [self nextItemPercentageOffset]);
-//      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
       attributes.transform = CGAffineTransformMakeScale(scale, scale);
       attributes.alpha = kNonFeaturedAlpha + ((1 - kNonFeaturedAlpha) * [self nextItemPercentageOffset]);
     }
     else {
+      NSLog(@"333 i = %d", i);
       CGFloat scale = kNonFeaturedScale;
-//      attributes.transform3D = CATransform3DMakeScale(scale, scale, 1);
       attributes.transform = CGAffineTransformMakeScale(scale, scale);
       attributes.alpha = kNonFeaturedAlpha;
     }
@@ -114,12 +118,14 @@ const CGFloat kNonFeaturedAlpha = 0.6;
   return layoutAttributes;
 }
 
+// Return nearest cell position
 -(CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
   NSInteger itemIndex = roundf(proposedContentOffset.x / self.cellWidth);
   CGFloat xOffset = itemIndex * self.cellWidth;
   return CGPointMake(xOffset, 0);
 }
 
+// Make prepareLayout func alway called when user drad card
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
   return YES;
 }

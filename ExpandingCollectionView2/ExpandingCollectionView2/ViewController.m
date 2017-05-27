@@ -141,20 +141,24 @@ const CGFloat kBgOffsetWidth = 100;
   CardCell *previousCell;
   CardCell *nextCell;
   
+  // Get previous cell if available
   if (selectedIndexPath.row - 1 >= 0) {
     NSIndexPath *previousIndexPath = [NSIndexPath indexPathForRow:(selectedIndexPath.row - 1) inSection:0];
     previousCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:previousIndexPath];
   }
   
+  // Get next cell if available
   if (selectedIndexPath.row + 1 < self.courses.count) {
     NSIndexPath *nextIndexPath = [NSIndexPath indexPathForRow:(selectedIndexPath.row + 1) inSection:0];
     nextCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:nextIndexPath];
   }
   
+  // Get scale of card cell
   CardCollectionViewLayout *cardCollectionViewLayout = (CardCollectionViewLayout*)self.cardCollectionView.collectionViewLayout;
   CGFloat alpha = cardCollectionViewLayout.nonFeaturedScale;
   NSTimeInterval duration = 0.5;
   
+  // Translate sibling cells to 2 side to hide it
   if (isHide == YES) {
   CGFloat translate = (self.cardCollectionView.bounds.size.width - cardCollectionViewLayout.cellWidth) / 2;
   CGAffineTransform translateBackward = CGAffineTransformMakeTranslation(-translate, 0);
@@ -171,6 +175,7 @@ const CGFloat kBgOffsetWidth = 100;
                      }
                    }];
   }
+  // Translate sibling cells beside 2 side of featured cell to show it
   else {
     CGAffineTransform transform = CGAffineTransformMakeScale(alpha, alpha);
     [UIView animateWithDuration:duration
@@ -192,16 +197,19 @@ const CGFloat kBgOffsetWidth = 100;
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+  // Return card cell
   if ([collectionView isEqual:self.cardCollectionView]) {
     CardCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.course = self.courses[indexPath.row];
     return cell;
   }
+  // Return number cell
   else if ([collectionView isEqual:self.numberCollectionView]) {
     NumberCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.number = indexPath.row + 1;
     return cell;
   }
+  // Return background cell
   else {
     BgCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     Course *course = self.courses[indexPath.row];
@@ -210,13 +218,18 @@ const CGFloat kBgOffsetWidth = 100;
   }
 }
 
+// Animate numbers and background when user drag cards
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
   if ([scrollView isEqual:self.cardCollectionView]) {
     CardCollectionViewLayout *cardCollectionViewLayout = (CardCollectionViewLayout*)self.cardCollectionView.collectionViewLayout;
+    // Calculate percent that card moved
     CGFloat percent = scrollView.contentOffset.x / (cardCollectionViewLayout.cellWidth * (self.courses.count - 1));
     
+    // Animate numbers based on percent
     NumberCollectionViewLayout *numberCollectionViewLayout = (NumberCollectionViewLayout*)self.numberCollectionView.collectionViewLayout;
     [self.numberCollectionView setContentOffset:CGPointMake(0, percent * numberCollectionViewLayout.cellHeight * (self.courses.count - 1))];
+    
+    // Animate background based on percent
     [self.bgCollectionView setContentOffset:CGPointMake(percent * kBgOffsetWidth * (self.courses.count - 1), 0)];
   }
 }
@@ -225,6 +238,7 @@ const CGFloat kBgOffsetWidth = 100;
   if ([collectionView isEqual:self.cardCollectionView]) {
     CardCollectionViewLayout *layout = (CardCollectionViewLayout*)self.cardCollectionView.collectionViewLayout;
     CGFloat cellWidth = layout.cellWidth;
+    // Only move when user doesn't choose featured cell
     if (collectionView.contentOffset.x != indexPath.row * cellWidth) {
       [collectionView setContentOffset:CGPointMake(indexPath.row * cellWidth, 0) animated:YES];
     }
@@ -235,6 +249,7 @@ const CGFloat kBgOffsetWidth = 100;
 }
 
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+  // Show detail view controller after sibling cell animated into featured cell
   NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
   
   // Put in asyn block to make sure that the animation done correctly.
