@@ -56,12 +56,12 @@
   }
   
   CGFloat cellHeight = self.collectionView.bounds.size.height;
-  CGFloat cellWidth = self.collectionView.bounds.size.width + self.offsetWidth;
+  CGFloat cellWidth = self.offsetWidth + self.collectionView.bounds.size.width + self.offsetWidth;
   
   for (int i = 0; i < self.numberOfItems; i++) {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    attributes.frame = CGRectMake(i * self.offsetWidth,
+    attributes.frame = CGRectMake(i * self.offsetWidth - self.offsetWidth,
                                   0,
                                   cellWidth,
                                   cellHeight);
