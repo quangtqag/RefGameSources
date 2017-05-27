@@ -10,6 +10,6 @@
 
 @interface NumberCollectionViewLayout : UICollectionViewLayout
 
-@property(nonatomic) CGFloat cellHeight;
+@property(nonatomic, readonly) CGFloat cellHeight;
 
 @end

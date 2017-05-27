@@ -7,11 +7,12 @@
 //
 
 #import "CardPresentAnimationController.h"
-//#import "ViewController.h"
 
 @implementation CardPresentAnimationController
 
 static const NSTimeInterval duration = 0.5;
+static const CGFloat offsetTop = 44;
+static const CGFloat offsetLeftRight = 20;
 
 -(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
   return duration;
@@ -24,15 +25,11 @@ static const NSTimeInterval duration = 0.5;
   
   CGRect initialFrame = self.originFrame;
   CGRect finalFrame = [transitionContext finalFrameForViewController:toVC];
-  finalFrame = CGRectInset(finalFrame, 20, 0);
-  finalFrame.origin.y = 44;
-  finalFrame.size.height -= 44;
+  finalFrame = CGRectInset(finalFrame, offsetLeftRight, 0);
+  finalFrame.origin.y = offsetTop;
+  finalFrame.size.height -= offsetTop;
   toVC.view.frame = initialFrame;
   toVC.view.layer.masksToBounds = YES;
-  toVC.view.layer.borderColor = [[UIColor darkGrayColor] CGColor];
-  toVC.view.layer.borderWidth = 0.5;
-  
-//  [fromVC.cardCollectionView setUserInteractionEnabled:NO];
   [toVC.view layoutIfNeeded];
   
   UIView *containerView = transitionContext.containerView;

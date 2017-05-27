@@ -20,8 +20,13 @@
 
 @implementation CardCollectionViewLayout
 
+const CGFloat kWidthRatio = 0.625;
 const CGFloat kNonFeaturedScale = 0.8;
 const CGFloat kNonFeaturedAlpha = 0.6;
+
+-(CGFloat)nonFeaturedScale {
+  return kNonFeaturedScale;
+}
 
 -(NSInteger)numberOfItems {
   return [self.collectionView numberOfItemsInSection:0];
@@ -29,6 +34,10 @@ const CGFloat kNonFeaturedAlpha = 0.6;
 
 -(CGFloat)cellHeight {
   return self.collectionView.bounds.size.height;
+}
+
+-(CGFloat)cellWidth {
+  return self.collectionView.bounds.size.width * kWidthRatio;
 }
 
 -(CGFloat)collectionViewWidth {
@@ -64,16 +73,13 @@ const CGFloat kNonFeaturedAlpha = 0.6;
   
   CGFloat paddingLeft = (self.collectionViewWidth - self.cellWidth) / 2;
   
-  CGFloat cellWidth = 200;
-  CGFloat cellHeight = self.collectionView.bounds.size.height;
-  
   for (int i = 0; i < self.numberOfItems; i++) {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    attributes.frame = CGRectMake(i * cellWidth + paddingLeft,
+    attributes.frame = CGRectMake(i * self.cellWidth + paddingLeft,
                                   0,
-                                  cellWidth,
-                                  cellHeight);
+                                  self.cellWidth,
+                                  self.cellHeight);
 
     if (i == [self featuredItemIndex]) {
       CGFloat scale = 1 - ((1 - kNonFeaturedScale) * [self nextItemPercentageOffset]);
@@ -113,8 +119,6 @@ const CGFloat kNonFeaturedAlpha = 0.6;
   CGFloat xOffset = itemIndex * self.cellWidth;
   return CGPointMake(xOffset, 0);
 }
-
-
 
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
   return YES;

@@ -38,8 +38,6 @@
 
 @implementation ViewController
 
-const CGFloat kNumberCellHeight = 60;
-const CGFloat kCardCellWidth = 200;
 const CGFloat kBgOffsetWidth = 100;
 
 - (void)viewDidLoad {
@@ -95,8 +93,6 @@ const CGFloat kBgOffsetWidth = 100;
   self.numberCollectionView.showsVerticalScrollIndicator = NO;
   self.numberCollectionView.backgroundColor = [UIColor clearColor];
   self.numberCollectionView.userInteractionEnabled = NO;
-  NumberCollectionViewLayout *layout = (NumberCollectionViewLayout*)self.numberCollectionView.collectionViewLayout;
-  layout.cellHeight = kNumberCellHeight;
 }
 
 -(void)configCardCollectionView {
@@ -106,8 +102,6 @@ const CGFloat kBgOffsetWidth = 100;
   self.cardCollectionView.showsHorizontalScrollIndicator = NO;
   self.cardCollectionView.backgroundColor = [UIColor clearColor];
   self.cardCollectionView.layer.masksToBounds = NO;
-  CardCollectionViewLayout *layout = (CardCollectionViewLayout*)self.cardCollectionView.collectionViewLayout;
-  layout.cellWidth = kCardCellWidth;
 }
 
 -(void)changeSearchIconToBackIcon {
@@ -138,11 +132,11 @@ const CGFloat kBgOffsetWidth = 100;
   [self presentViewController:self.detailViewController animated:YES completion:nil];
   
   [self.cardCollectionView setUserInteractionEnabled:NO];
-  [self animateExpandHideSiblingCells];
+  [self animateHideSiblingCells:YES];
   [self changeSearchIconToBackIcon];
 }
 
--(void)animateExpandHideSiblingCells {
+-(void)animateHideSiblingCells:(BOOL)isHide {
   NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
   CardCell *previousCell;
   CardCell *nextCell;
@@ -157,11 +151,17 @@ const CGFloat kBgOffsetWidth = 100;
     nextCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:nextIndexPath];
   }
   
-  CGAffineTransform translateBackward = CGAffineTransformMakeTranslation(-60, 0);
-  CGAffineTransform transformBackward = CGAffineTransformScale(translateBackward, 0.8, 0.8);
-  CGAffineTransform translateForward = CGAffineTransformMakeTranslation(60, 0);
-  CGAffineTransform transformForward = CGAffineTransformScale(translateForward, 0.8, 0.8);
-  [UIView animateWithDuration:0.5
+  CardCollectionViewLayout *cardCollectionViewLayout = (CardCollectionViewLayout*)self.cardCollectionView.collectionViewLayout;
+  CGFloat alpha = cardCollectionViewLayout.nonFeaturedScale;
+  NSTimeInterval duration = 0.5;
+  
+  if (isHide == YES) {
+  CGFloat translate = (self.cardCollectionView.bounds.size.width - cardCollectionViewLayout.cellWidth) / 2;
+  CGAffineTransform translateBackward = CGAffineTransformMakeTranslation(-translate, 0);
+  CGAffineTransform transformBackward = CGAffineTransformScale(translateBackward, alpha, alpha);
+  CGAffineTransform translateForward = CGAffineTransformMakeTranslation(translate, 0);
+  CGAffineTransform transformForward = CGAffineTransformScale(translateForward, alpha, alpha);
+  [UIView animateWithDuration:duration
                    animations:^{
                      if (previousCell != nil) {
                        previousCell.transform = transformBackward;
@@ -170,33 +170,19 @@ const CGFloat kBgOffsetWidth = 100;
                        nextCell.transform = transformForward;
                      }
                    }];
-}
-
--(void)animateCollapseShowSiblingCells {
-  NSIndexPath *selectedIndexPath = self.cardCollectionView.indexPathsForSelectedItems.firstObject;
-  CardCell *previousCell;
-  CardCell *nextCell;
-  
-  if (selectedIndexPath.row - 1 >= 0) {
-    NSIndexPath *previousIndexPath = [NSIndexPath indexPathForRow:(selectedIndexPath.row - 1) inSection:0];
-    previousCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:previousIndexPath];
   }
-  
-  if (selectedIndexPath.row + 1 < self.courses.count) {
-    NSIndexPath *nextIndexPath = [NSIndexPath indexPathForRow:(selectedIndexPath.row + 1) inSection:0];
-    nextCell = (CardCell *)[self.cardCollectionView cellForItemAtIndexPath:nextIndexPath];
+  else {
+    CGAffineTransform transform = CGAffineTransformMakeScale(alpha, alpha);
+    [UIView animateWithDuration:duration
+                     animations:^{
+                       if (previousCell != nil) {
+                         previousCell.transform = transform;
+                       }
+                       if (nextCell != nil) {
+                         nextCell.transform = transform;
+                       }
+                     }];
   }
-  
-  CGAffineTransform transform = CGAffineTransformMakeScale(0.8, 0.8);
-  [UIView animateWithDuration:0.5
-                   animations:^{
-                     if (previousCell != nil) {
-                       previousCell.transform = transform;
-                     }
-                     if (nextCell != nil) {
-                       nextCell.transform = transform;
-                     }
-                   }];
 }
 
 #pragma mark - Collection View Delegate DataSource
@@ -226,16 +212,21 @@ const CGFloat kBgOffsetWidth = 100;
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
   if ([scrollView isEqual:self.cardCollectionView]) {
-    CGFloat percent = scrollView.contentOffset.x / (kCardCellWidth * (self.courses.count - 1));
-    [self.numberCollectionView setContentOffset:CGPointMake(0, percent * kNumberCellHeight * (self.courses.count - 1))];
+    CardCollectionViewLayout *cardCollectionViewLayout = (CardCollectionViewLayout*)self.cardCollectionView.collectionViewLayout;
+    CGFloat percent = scrollView.contentOffset.x / (cardCollectionViewLayout.cellWidth * (self.courses.count - 1));
+    
+    NumberCollectionViewLayout *numberCollectionViewLayout = (NumberCollectionViewLayout*)self.numberCollectionView.collectionViewLayout;
+    [self.numberCollectionView setContentOffset:CGPointMake(0, percent * numberCollectionViewLayout.cellHeight * (self.courses.count - 1))];
     [self.bgCollectionView setContentOffset:CGPointMake(percent * kBgOffsetWidth * (self.courses.count - 1), 0)];
   }
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
   if ([collectionView isEqual:self.cardCollectionView]) {
-    if (collectionView.contentOffset.x != indexPath.row * kCardCellWidth) {
-      [collectionView setContentOffset:CGPointMake(indexPath.row * kCardCellWidth, 0) animated:YES];
+    CardCollectionViewLayout *layout = (CardCollectionViewLayout*)self.cardCollectionView.collectionViewLayout;
+    CGFloat cellWidth = layout.cellWidth;
+    if (collectionView.contentOffset.x != indexPath.row * cellWidth) {
+      [collectionView setContentOffset:CGPointMake(indexPath.row * cellWidth, 0) animated:YES];
     }
     else {
       [self showDetailViewControllerWithCourse:self.courses[indexPath.row]];
@@ -271,7 +262,7 @@ const CGFloat kBgOffsetWidth = 100;
   self.cardDismissAnimationController.destinationFrame = cellFrame;
   
   [self.cardCollectionView setUserInteractionEnabled:YES];
-  [self animateCollapseShowSiblingCells];
+  [self animateHideSiblingCells:NO];
   
   return self.cardDismissAnimationController;
 }

@@ -33,6 +33,10 @@
   return self.collectionView.bounds.size.width;
 }
 
+-(CGFloat)cellHeight {
+  return self.collectionView.bounds.size.height / 3;
+}
+
 -(CGFloat)collectionViewHeight {
   return self.collectionView.bounds.size.height;
 }

@@ -37,7 +37,6 @@ static const NSTimeInterval duration = 0.5;
                    completion:^(BOOL finished) {
                      [fromVC.view removeFromSuperview];
                      [transitionContext completeTransition:YES];
-//                     [toVC.view setUserInteractionEnabled:YES];
                    }];
 }
 

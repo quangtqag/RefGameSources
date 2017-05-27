@@ -10,6 +10,7 @@
 
 @interface CardCollectionViewLayout : UICollectionViewLayout
 
-@property(assign) CGFloat cellWidth;
+@property(assign, readonly) CGFloat cellWidth;
+@property(assign, readonly) CGFloat nonFeaturedScale;
 
 @end
