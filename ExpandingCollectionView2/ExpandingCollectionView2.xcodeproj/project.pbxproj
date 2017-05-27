@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BAFFD141ED9146800CB7D73 /* BgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFFD131ED9146800CB7D73 /* BgCell.m */; };
+		1BAFFD171ED915C400CB7D73 /* BgCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFFD161ED915C400CB7D73 /* BgCollectionViewLayout.m */; };
 		D9263D2B1ED6B40500253CA0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9263D2A1ED6B40500253CA0 /* DetailViewController.m */; };
 		D9263D2E1ED6C1FD00253CA0 /* CommenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9263D2D1ED6C1FD00253CA0 /* CommenterCell.m */; };
 		D9263D311ED6C97E00253CA0 /* CardPresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9263D301ED6C97E00253CA0 /* CardPresentAnimationController.m */; };
@@ -28,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BAFFD121ED9146000CB7D73 /* BgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BgCell.h; sourceTree = "<group>"; };
+		1BAFFD131ED9146800CB7D73 /* BgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BgCell.m; sourceTree = "<group>"; };
+		1BAFFD151ED915BC00CB7D73 /* BgCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BgCollectionViewLayout.h; sourceTree = "<group>"; };
+		1BAFFD161ED915C400CB7D73 /* BgCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BgCollectionViewLayout.m; sourceTree = "<group>"; };
 		D9263D291ED6B40500253CA0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		D9263D2A1ED6B40500253CA0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D9263D2C1ED6C1FD00253CA0 /* CommenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommenterCell.h; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		D9D1908E1ED586D300A6A187 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1BAFFD121ED9146000CB7D73 /* BgCell.h */,
+				1BAFFD131ED9146800CB7D73 /* BgCell.m */,
 				D9D1907F1ED5679700A6A187 /* CardCell.h */,
 				D9D190801ED5679700A6A187 /* CardCell.m */,
 				D9D190881ED5825A00A6A187 /* NumberCell.h */,
@@ -154,6 +162,8 @@
 		D9D190901ED5871400A6A187 /* Collection View Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				1BAFFD151ED915BC00CB7D73 /* BgCollectionViewLayout.h */,
+				1BAFFD161ED915C400CB7D73 /* BgCollectionViewLayout.m */,
 				D9D190791ED52BC500A6A187 /* CardCollectionViewLayout.h */,
 				D9D1907A1ED52BC500A6A187 /* CardCollectionViewLayout.m */,
 				D9D1908B1ED582BC00A6A187 /* NumberCollectionViewLayout.h */,
@@ -275,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95E9D0A1ED6750F000DF821 /* Commenter.m in Sources */,
+				1BAFFD171ED915C400CB7D73 /* BgCollectionViewLayout.m in Sources */,
 				D9D1907E1ED53FD000A6A187 /* UIColor+Ext.m in Sources */,
 				D968D6D31ED51F950079044E /* ViewController.m in Sources */,
 				D968D6D01ED51F950079044E /* AppDelegate.m in Sources */,
@@ -282,6 +293,7 @@
 				D95E9D061ED67486000DF821 /* Course.m in Sources */,
 				D9D1908D1ED582BC00A6A187 /* NumberCollectionViewLayout.m in Sources */,
 				D9D190811ED5679700A6A187 /* CardCell.m in Sources */,
+				1BAFFD141ED9146800CB7D73 /* BgCell.m in Sources */,
 				D9D1907B1ED52BC500A6A187 /* CardCollectionViewLayout.m in Sources */,
 				D9263D2E1ED6C1FD00253CA0 /* CommenterCell.m in Sources */,
 				D94F97391ED8122600CDD11A /* CardDismissAnimationController.m in Sources */,

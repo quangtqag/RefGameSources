@@ -7,17 +7,24 @@
 //
 
 #import "ViewController.h"
-#import "UIColor+Ext.h"
+
 #import "CardCell.h"
-#import "Course.h"
+#import "BgCell.h"
+#import "NumberCell.h"
+
 #import "CardCollectionViewLayout.h"
 #import "NumberCollectionViewLayout.h"
+#import "BgCollectionViewLayout.h"
+
+#import "UIColor+Ext.h"
+#import "Course.h"
 #import "DetailViewController.h"
-#import "NumberCell.h"
+
 #import "CardPresentAnimationController.h"
 #import "CardDismissAnimationController.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *bgCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *cardCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *numberCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *totalCoursesLabel;
@@ -33,14 +40,17 @@
 
 const CGFloat kNumberCellHeight = 60;
 const CGFloat kCardCellWidth = 200;
+const CGFloat kBgOffsetWidth = 100;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
   self.courses = [self coursesData];
   self.totalCoursesLabel.text = [NSString stringWithFormat:@"%ld", self.courses.count];
+  
   [self configCardCollectionView];
   [self configNumberCollectionView];
+  [self configBgCollectionView];
   
   self.cardPresentAnimationController = [CardPresentAnimationController new];
   self.cardDismissAnimationController = [CardDismissAnimationController new];
@@ -67,6 +77,15 @@ const CGFloat kCardCellWidth = 200;
     [NSException raise:@"Can not get courses data!" format:@"%@", err.localizedDescription];
     return nil;
   }
+}
+
+-(void)configBgCollectionView {
+  self.bgCollectionView.prefetchingEnabled = NO;
+  self.bgCollectionView.delegate = self;
+  self.bgCollectionView.dataSource = self;
+  self.bgCollectionView.showsHorizontalScrollIndicator = NO;
+  BgCollectionViewLayout *layout = (BgCollectionViewLayout*)self.bgCollectionView.collectionViewLayout;
+  layout.offsetWidth = kBgOffsetWidth;
 }
 
 -(void)configNumberCollectionView {
@@ -191,9 +210,15 @@ const CGFloat kCardCellWidth = 200;
     cell.course = self.courses[indexPath.row];
     return cell;
   }
-  else {
+  else if ([collectionView isEqual:self.numberCollectionView]) {
     NumberCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.number = indexPath.row + 1;
+    return cell;
+  }
+  else {
+    BgCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    Course *course = self.courses[indexPath.row];
+    cell.img = [UIImage imageNamed:course.featuredImageName];
     return cell;
   }
 }
@@ -202,15 +227,18 @@ const CGFloat kCardCellWidth = 200;
   if ([scrollView isEqual:self.cardCollectionView]) {
     CGFloat percent = scrollView.contentOffset.x / (kCardCellWidth * (self.courses.count - 1));
     [self.numberCollectionView setContentOffset:CGPointMake(0, percent * kNumberCellHeight * (self.courses.count - 1))];
+    [self.bgCollectionView setContentOffset:CGPointMake(percent * kBgOffsetWidth * (self.courses.count - 1), 0)];
   }
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  if (collectionView.contentOffset.x != indexPath.row * kCardCellWidth) {
-    [collectionView setContentOffset:CGPointMake(indexPath.row * kCardCellWidth, 0) animated:YES];
-  }
-  else {
-    [self showDetailViewControllerWithCourse:self.courses[indexPath.row]];
+  if ([collectionView isEqual:self.cardCollectionView]) {
+    if (collectionView.contentOffset.x != indexPath.row * kCardCellWidth) {
+      [collectionView setContentOffset:CGPointMake(indexPath.row * kCardCellWidth, 0) animated:YES];
+    }
+    else {
+      [self showDetailViewControllerWithCourse:self.courses[indexPath.row]];
+    }
   }
 }
 
