@@ -70,8 +70,8 @@
   NSRange yRange = NSMakeRange(0, 300);
   NSRange zRange = NSMakeRange(100, 1000);
   NSRange zRotateRange = NSMakeRange(10, 360);
-  CGFloat minScale = 0.1;
-  CGFloat maxScale = 3;
+//  CGFloat minScale = 0.1;
+//  CGFloat maxScale = 3;
   CGFloat duration = 2.0f;
   for (CALayer *subLayer in subLayers) {
     
@@ -86,7 +86,7 @@
     
     int zRotateRandom = (int)(arc4random_uniform((unsigned int)zRotateRange.length + 1) + zRotateRange.location);
     
-    CGFloat scaleRandom = arc4random_uniform((maxScale - minScale) * 10 + 1) / 10 + minScale;
+//    CGFloat scaleRandom = arc4random_uniform((maxScale - minScale) * 10 + 1) / 10 + minScale;
     
     // Transform animation
     CABasicAnimation *translateAnim = [CABasicAnimation animationWithKeyPath:@"transform"];
