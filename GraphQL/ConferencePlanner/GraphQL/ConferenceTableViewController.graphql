@@ -1,0 +1,15 @@
+fragment ConferenceDetails on Conference {
+id
+name
+city
+year
+attendees {
+id
+}
+}
+
+query AllConferences {
+allConferences {
+...ConferenceDetails
+}
+}

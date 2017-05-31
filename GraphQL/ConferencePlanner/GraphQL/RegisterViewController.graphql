@@ -1,0 +1,15 @@
+mutation CreateAttendee($name: String!) {
+# 2
+createAttendee(name: $name) {
+# 3
+id
+name
+}
+}
+
+mutation UpdateAttendeeName($id: ID!, $newName: String!) {
+updateAttendee(id: $id, name: $newName) {
+id
+name
+}
+}

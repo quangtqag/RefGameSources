@@ -1,0 +1,6 @@
+framework module Pods_ConferencePlanner {
+  umbrella header "Pods-ConferencePlanner-umbrella.h"
+
+  export *
+  module * { export * }
+}
