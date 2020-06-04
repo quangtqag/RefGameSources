@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Tutorial" customModule="CheLis">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Many Colors to Choose" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c9x-DS-1cE">
+                    <rect key="frame" x="20" y="50" width="280" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="SCV-Zq-uKc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color_palette" translatesAutoresizingMaskIntoConstraints="NO" id="qsp-NG-ir7">
+                    <rect key="frame" x="0.0" y="125" width="320" height="393"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qsp-NG-ir7" secondAttribute="bottom" constant="50" id="47O-g1-shN"/>
+                <constraint firstItem="qsp-NG-ir7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7NE-ge-kEL"/>
+                <constraint firstItem="qsp-NG-ir7" firstAttribute="top" secondItem="c9x-DS-1cE" secondAttribute="bottom" constant="25" id="J1G-XT-uff"/>
+                <constraint firstItem="c9x-DS-1cE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="QVr-rf-yoc"/>
+                <constraint firstItem="qsp-NG-ir7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Qrw-Qm-YEF"/>
+                <constraint firstItem="c9x-DS-1cE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hsb-J6-RKz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c9x-DS-1cE" secondAttribute="trailing" constant="20" id="zGZ-f9-DtG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="qsp-NG-ir7" id="Ifa-bo-3g2"/>
+                <outlet property="labelDesc" destination="c9x-DS-1cE" id="tLh-tw-7SK"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="color_palette" width="970" height="1700"/>
+    </resources>
+</document>
